@@ -1,4 +1,5 @@
 mathjax: true
+-------------
 
 Testing MathJax support:
 
