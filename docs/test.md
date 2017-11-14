@@ -1,14 +1,3 @@
----
-<<<<<<< HEAD
-layout: page
----
-
-Testing MathJax support:
-=======
-mathjax: true
----
->>>>>>> parent of a91232d... MathJax test
-
 Testing MathJax support:
 
 $$
