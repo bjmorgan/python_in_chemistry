@@ -2,3 +2,4 @@ matplotlib
 numpy
 scipy
 mendeleev
+pandas
