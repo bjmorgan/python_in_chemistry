@@ -3,9 +3,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
    
-      <title>/arm61/python_in_chemistry/</title>
+      <title>/python_in_chemistry/</title>
    
-   <link>/arm61/python_in_chemistry/</link>
+   <link>/python_in_chemistry/</link>
    <description>introducing python to chemistry students</description>
    <language>en-uk</language>
    
@@ -15,21 +15,21 @@
    <description>
    <![CDATA[ introducing python to chemistry students ]]>
    </description>
-   <link>/arm61/python_in_chemistry/</link>
+   <link>/python_in_chemistry/</link>
    <image>
-   <url>/arm61/python_in_chemistry/assets/images/pic.png</url>
+   <url>/python_in_chemistry/assets/images/pic.png</url>
    <title>python_in_chemistry</title>
-   <link>/arm61/python_in_chemistry/</link>
+   <link>/python_in_chemistry/</link>
    </image>
    <generator>Jekyll 3.6.2</generator>
    <lastBuildDate></lastBuildDate>
-   <atom:link href="/arm61/python_in_chemistry/rss.xml" rel="self" type="application/rss+xml"/>
+   <atom:link href="/python_in_chemistry/rss.xml" rel="self" type="application/rss+xml"/>
    <ttl>60</ttl>
    <atom:link href="rss" rel="self" type="application/rss+xml" />
    
 	<item>
 	  <title>Working with Physical Constants and Units</title>
-	  <link>/arm61/python_in_chemistry/working-with-physical-constants</link>
+	  <link>/python_in_chemistry/working-with-physical-constants</link>
 		
 				
 		
@@ -40,7 +40,7 @@
 				
 		
 	  <pubDate>2017-12-16T00:00:00+00:00</pubDate>
-	  <guid>/arm61/python_in_chemistry/working-with-physical-constants</guid>
+	  <guid>/python_in_chemistry/working-with-physical-constants</guid>
 	  <description><![CDATA[
 	     <p>A lot of the expressions that describe chemical phenomena involve physical constants, such as the speed of light, <script type="math/tex">c</script>, Avogardo’s constant, <script type="math/tex">N_A</script>, Planck’s constant, <script type="math/tex">h</script>, and the Boltzmann constant, <script type="math/tex">k_B</script>. When working with algebraic expressions, it is also important to keep track of the relevant units. Different experiments may conventionally report data in non-S.I. units and these units must be converted for comparing data or calculating chemical properties.</p>
 
@@ -62,7 +62,7 @@
 
 	<item>
 	  <title>Running Jupyter Locally</title>
-	  <link>/arm61/python_in_chemistry/running-jupyter-locally</link>
+	  <link>/python_in_chemistry/running-jupyter-locally</link>
 		
 				
 		
@@ -73,7 +73,7 @@
 				
 		
 	  <pubDate>2017-12-16T00:00:00+00:00</pubDate>
-	  <guid>/arm61/python_in_chemistry/running-jupyter-locally</guid>
+	  <guid>/python_in_chemistry/running-jupyter-locally</guid>
 	  <description><![CDATA[
 	     <p>Although it is possible to run all of the pre-build resources on this site through the Binder utility (meaning that they are run on an external compute resources). You may want to try writing your on Jupyter notebooks and Python code.</p>
 
@@ -88,7 +88,7 @@
 
 	<item>
 	  <title>Loops</title>
-	  <link>/arm61/python_in_chemistry/loops</link>
+	  <link>/python_in_chemistry/loops</link>
 		
 				
 						<author>Andrew R. McCluskey</author>
@@ -99,7 +99,7 @@
 				
 		
 	  <pubDate>2017-12-16T00:00:00+00:00</pubDate>
-	  <guid>/arm61/python_in_chemistry/loops</guid>
+	  <guid>/python_in_chemistry/loops</guid>
 	  <description><![CDATA[
 	     <p>This notebook follows on from the <a href="/functions">functions</a> notebook. The aim here is to show the utility of <strong>loop</strong> in Python. Again I am aiming to use examples from <em>chemistry</em> related problems, but occasionally examples from physics and mathematics will come through.</p>
 
@@ -114,7 +114,7 @@
 
 	<item>
 	  <title>Getting Started</title>
-	  <link>/arm61/python_in_chemistry/getting-started</link>
+	  <link>/python_in_chemistry/getting-started</link>
 		
 				
 		
@@ -125,7 +125,7 @@
 				
 		
 	  <pubDate>2017-12-16T00:00:00+00:00</pubDate>
-	  <guid>/arm61/python_in_chemistry/getting-started</guid>
+	  <guid>/python_in_chemistry/getting-started</guid>
 	  <description><![CDATA[
 	     <p>The best way to get started with python_in_chemistry is by working through the Data Analysis with Jupyter Notebooks series of notebooks. These will work through:</p>
 
@@ -153,7 +153,7 @@
 
 	<item>
 	  <title>Functions</title>
-	  <link>/arm61/python_in_chemistry/functions</link>
+	  <link>/python_in_chemistry/functions</link>
 		
 				
 						<author>Andrew R. McCluskey</author>
@@ -164,7 +164,7 @@
 				
 		
 	  <pubDate>2017-12-16T00:00:00+00:00</pubDate>
-	  <guid>/arm61/python_in_chemistry/functions</guid>
+	  <guid>/python_in_chemistry/functions</guid>
 	  <description><![CDATA[
 	     <p>This notebook introduces the concept of <strong>functions</strong> in terms of the Python language. I endevoured to use examples of <em>chemistry</em> related problems, but occasionally examples from physics or mathematics will come through.</p>
 

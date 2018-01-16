@@ -5,7 +5,7 @@ paginate: 100 # it will paginate after this number
 language: 'en-uk'
 
 # edit baseurl to simply '/' if using as your personal page (instead of a project page)
-baseurl: /arm61/python_in_chemistry/
+baseurl: /python_in_chemistry/
 #baseurl: /
 
 # Website info
