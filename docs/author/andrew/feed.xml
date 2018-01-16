@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+      <title>/arm61/python_in_chemistry/</title>
+   
+   <link>/arm61/python_in_chemistry/</link>
+   <description>introducing python to chemistry students</description>
+   <language>en-uk</language>
+   
+      
+            
+               
+               
+                  <managingEditor>Andrew R. McCluskey</managingEditor>
+            
+      
+            
+      
+            
+      
+   
+   <title>
+   <![CDATA[ Andrew R. McCluskey - python_in_chemistry ]]>
+   </title>
+   <description>
+   <![CDATA[ introducing python to chemistry students ]]>
+   </description>
+   <link>/arm61/python_in_chemistry/</link>
+   <image>
+   <url>/arm61/python_in_chemistry/assets/images/pic.png</url>
+   <title>Andrew R. McCluskey - python_in_chemistry</title>
+   <link>/arm61/python_in_chemistry/</link>
+   </image>
+   <generator>Jekyll 3.6.2</generator>
+   <lastBuildDate></lastBuildDate>
+   <atom:link href="/arm61/python_in_chemistry/author/andrew/rss.xml" rel="self" type="application/rss+xml"/>
+   <ttl>60</ttl>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+	  <title>Functions</title>
+	  <link>/arm61/python_in_chemistry/functions</link>
+		
+				
+						<author>Andrew R. McCluskey</author>
+				
+		
+				
+		
+				
+		
+	  <pubDate>2017-12-16T00:00:00+00:00</pubDate>
+	  <guid>/arm61/python_in_chemistry/functions</guid>
+	  <description><![CDATA[
+	     <p>This notebook introduces the concept of <strong>functions</strong> in terms of the Python language. I endevoured to use examples of <em>chemistry</em> related problems, but occasionally examples from physics or mathematics will come through.</p>
+
+<p>Like many other programming languages Python lets you use functions – as a way to write less code.</p>
+
+<p>The concept of a function should be familar from mathematics, e.g.</p>
+
+<script type="math/tex; mode=display">f(x)</script>
+
+<p>where, <script type="math/tex">f(x)</script> is some mathematical operation that acts on the argument <script type="math/tex">x</script>. An example of a function is,</p>
+
+<script type="math/tex; mode=display">f(x) = x^2</script>
+
+<p>Using this we can say that <script type="math/tex">f(2) = 4</script>, <script type="math/tex">f(3)=9</script>, etc.</p>
+
+<p>The use of <strong>functions</strong> is an important paradigm in programming – the following Jupyter notebook gives a quick introduction to functions and how they can be used.</p>
+
+<p><a href="https://mybinder.org/v2/gh/bjmorgan/python_in_chemistry/master?filepath=General%2FFunctions.ipynb">Run the notebook</a></p>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Loops</title>
+	  <link>/arm61/python_in_chemistry/loops</link>
+		
+				
+						<author>Andrew R. McCluskey</author>
+				
+		
+				
+		
+				
+		
+	  <pubDate>2017-12-16T00:00:00+00:00</pubDate>
+	  <guid>/arm61/python_in_chemistry/loops</guid>
+	  <description><![CDATA[
+	     <p>This notebook follows on from the <a href="/functions">functions</a> notebook. The aim here is to show the utility of <strong>loop</strong> in Python. Again I am aiming to use examples from <em>chemistry</em> related problems, but occasionally examples from physics and mathematics will come through.</p>
+
+<p>As is the case with many aspects of programming, the purpose of a loop is to allow programmers to <em>write less code</em>. This leads to the idiom that <em>computers are really good at doing the same thing over and over</em>, much better than humans.</p>
+
+<p>A loop really is just that, a way to tell the computer to perform the same task multiple times.</p>
+
+<p><a href="https://mybinder.org/v2/gh/bjmorgan/python_in_chemistry/master?filepath=General%2FLoops.ipynb">Run the notebook</a></p>
+
+	  ]]></description>
+	</item>
+
+
+</channel>
+</rss>

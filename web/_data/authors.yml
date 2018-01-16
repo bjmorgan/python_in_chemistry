@@ -1,0 +1,21 @@
+andrew:
+  username: andrew
+  name: Andrew R. McCluskey
+  url_full: http://people.bath.ac.uk/arm61
+  url: people.bath.ac.uk/arm61
+  bio: chemistry/programming phd student
+  twitter: an_drewmcc
+ben:
+  username: ben
+  name: Ben Morgan
+  url_full: http://www.analysisandsynthesis.com/
+  url: analysisandsynthesis.com/
+  bio: royal society univeristy research fellow
+  twitter: bjmorganj
+fiona:
+  username: fiona
+  name: Fiona Dickinson
+  url_full: http://www.bath.ac.uk/chemistry/contacts/academics/fiona-dickinson/ 
+  url: bath.ac.uk/chemistry/contacts/academics/fiona-dickinson/
+  bio: teaching fellow 
+  twitter: chemfd
