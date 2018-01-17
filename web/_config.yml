@@ -5,18 +5,18 @@ paginate: 100 # it will paginate after this number
 language: 'en-uk'
 
 # edit baseurl to simply '/' if using as your personal page (instead of a project page)
-baseurl: /python_in_chemistry/
-#baseurl: /
+#baseurl: /python_in_chemistry/
+baseurl: /
 
 # Website info
 title: python_in_chemistry 
-description: introducing python to chemistry students
+description: introducing Python to chemistry students
 #cover: green#assets/images/pychem.jpeg
 logo: assets/images/pic.png
 logo_dark: assets/images/pic.png
 favicon: assets/images/pic.png
-production_url: https://myJekyll.github.io/jasper2/
-source_url: https://github.com/myJekyll/jasper2/
+production_url: https://pythoninchemistry.org
+source_url: https://github.com/bjmorgan/python_in_chemistry/
 
 # Social info
 navigation: True # show the navbar links

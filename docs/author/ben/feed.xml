@@ -3,10 +3,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
    
-      <title>/python_in_chemistry/</title>
+      <title>/</title>
    
-   <link>/python_in_chemistry/</link>
-   <description>introducing python to chemistry students</description>
+   <link>/</link>
+   <description>introducing Python to chemistry students</description>
    <language>en-uk</language>
    
       
@@ -25,23 +25,23 @@
    <![CDATA[ Ben Morgan - python_in_chemistry ]]>
    </title>
    <description>
-   <![CDATA[ introducing python to chemistry students ]]>
+   <![CDATA[ introducing Python to chemistry students ]]>
    </description>
-   <link>/python_in_chemistry/</link>
+   <link>/</link>
    <image>
-   <url>/python_in_chemistry/assets/images/pic.png</url>
+   <url>/assets/images/pic.png</url>
    <title>Ben Morgan - python_in_chemistry</title>
-   <link>/python_in_chemistry/</link>
+   <link>/</link>
    </image>
    <generator>Jekyll 3.6.2</generator>
    <lastBuildDate></lastBuildDate>
-   <atom:link href="/python_in_chemistry/author/ben/rss.xml" rel="self" type="application/rss+xml"/>
+   <atom:link href="/author/ben/rss.xml" rel="self" type="application/rss+xml"/>
    <ttl>60</ttl>
    <atom:link href="rss" rel="self" type="application/rss+xml" />
    
 	<item>
 	  <title>Getting Started</title>
-	  <link>/python_in_chemistry/getting-started</link>
+	  <link>/getting-started</link>
 		
 				
 		
@@ -52,7 +52,7 @@
 				
 		
 	  <pubDate>2017-12-16T00:00:00+00:00</pubDate>
-	  <guid>/python_in_chemistry/getting-started</guid>
+	  <guid>/getting-started</guid>
 	  <description><![CDATA[
 	     <p>The best way to get started with python_in_chemistry is by working through the Data Analysis with Jupyter Notebooks series of notebooks. These will work through:</p>
 
@@ -80,7 +80,7 @@
 
 	<item>
 	  <title>Working with Physical Constants and Units</title>
-	  <link>/python_in_chemistry/working-with-physical-constants</link>
+	  <link>/working-with-physical-constants</link>
 		
 				
 		
@@ -91,7 +91,7 @@
 				
 		
 	  <pubDate>2017-12-16T00:00:00+00:00</pubDate>
-	  <guid>/python_in_chemistry/working-with-physical-constants</guid>
+	  <guid>/working-with-physical-constants</guid>
 	  <description><![CDATA[
 	     <p>A lot of the expressions that describe chemical phenomena involve physical constants, such as the speed of light, <script type="math/tex">c</script>, Avogardo’s constant, <script type="math/tex">N_A</script>, Planck’s constant, <script type="math/tex">h</script>, and the Boltzmann constant, <script type="math/tex">k_B</script>. When working with algebraic expressions, it is also important to keep track of the relevant units. Different experiments may conventionally report data in non-S.I. units and these units must be converted for comparing data or calculating chemical properties.</p>
 
