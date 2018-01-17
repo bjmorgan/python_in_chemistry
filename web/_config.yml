@@ -87,4 +87,5 @@ exclude:
   - "*.Rmd"
   - vendor
   - .travis.yml
-  - node_modules
+  - node_modules/term-size
+  - update_web.py
