@@ -42,7 +42,9 @@ permalink: /:title
 # Tags' info in `_data/tags_info.yml`
 
 # gems and other configs
-plugins: [jekyll-paginate, jekyll-feed]
+plugins:
+    - jekyll-paginate
+    - jekyll-feed
 exclude: [vendor]
 
 feed:
@@ -85,3 +87,4 @@ exclude:
   - "*.Rmd"
   - vendor
   - .travis.yml
+  - node_modules
