@@ -15,9 +15,8 @@
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}assets/built/screen.css" />
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}assets/built/screen.edited.css" />
     <!-- highlight.js -->
-    <!--<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/default.min.css">-->
-    <link rel="stylesheet" href="{{ site.baseurl }}assets/built/rainbow.css" />
-    <style>.hljs { background: none; }</style>
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}assets/built/rainbow.css" />
+    <!--<style>.hljs { background: none; }</style>-->
 
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     {% include head.html %}
@@ -74,7 +73,7 @@
     {% endif %}
 
     <!-- highlight.js -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script src="{{ site.baseurl }}assets/js/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
 
     <!-- jQuery + Fitvids, which makes all video embeds responsive -->

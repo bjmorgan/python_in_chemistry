@@ -1,21 +1,21 @@
 /*
 
-Style with support for rainbow parens
+custom higlight.js stylesheet
 
 */
 
 .hljs {
   display: block; padding: 0.5em;
-  background: #F3F3F3; color: #440000;
+  background: #fafafa; color: #333333;
 }
 
 
 .hljs-body,
 .hljs-collection {
-   color: #000000;
+   color: #333333;
 }
 
-.hljs-comment,
+.hljs-comment, /* comments */
 .hljs-template_comment,
 .diff .hljs-header,
 .hljs-doctype,
@@ -31,10 +31,10 @@ Style with support for rainbow parens
 .javascript .hljs-title,
 .hljs-addition,
 .css .hljs-tag {
-  color: #cc99cc;
+  color: #1c99cc;
 }
 
-.hljs-number { color: #f99157; }
+.hljs-number { color: #FF7F50; }
 
 .hljs-command,
 .hljs-string,
@@ -43,7 +43,7 @@ Style with support for rainbow parens
 .tex .hljs-formula,
 .hljs-regexp,
 .hljs-hexcolor {
-  color: #8abeb7;
+  color: #de5d20;
 }
 
 .hljs-title,
@@ -55,12 +55,12 @@ Style with support for rainbow parens
 .lisp .hljs-title,
 .hljs-identifier
 {
-  color: #b5bd68;
+  color: #050d68;
 }
 
 .hljs-class .hljs-keyword
 {
-  color: #f2777a;
+  color: #f2691E;
 }
 
 .hljs-variable,
@@ -73,7 +73,7 @@ Style with support for rainbow parens
 .hljs-id,
 .lisp .hljs-title,
 .clojure .hljs-title .hljs-built_in {
-   color: #ffcc66;
+   color: #5fac36;
 }
 
 .hljs-tag .hljs-title,
@@ -85,7 +85,7 @@ Style with support for rainbow parens
 
 .hljs-attribute,
 .clojure .hljs-title {
-  color: #81a2be;
+  color: #11a2be;
 }
 
 .hljs-preprocessor,
@@ -100,7 +100,7 @@ Style with support for rainbow parens
 .hljs-important,
 .hljs-subst,
 .hljs-cdata {
-  color: #f99157;
+  color: #40a0D0;
 }
 
 .hljs-deletion {
@@ -110,4 +110,3 @@ Style with support for rainbow parens
 .tex .hljs-formula {
   background: #eee8d5;
 }
-
