@@ -3,9 +3,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
    
-      <title>/</title>
+      <title>./</title>
    
-   <link>/</link>
+   <link>./</link>
    <description>introducing Python to chemistry students</description>
    <language>en-uk</language>
    
@@ -27,21 +27,21 @@
    <description>
    <![CDATA[ introducing Python to chemistry students ]]>
    </description>
-   <link>/</link>
+   <link>./</link>
    <image>
-   <url>/assets/images/pic.png</url>
+   <url>./assets/images/pic.png</url>
    <title>Andrew R. McCluskey - python_in_chemistry</title>
-   <link>/</link>
+   <link>./</link>
    </image>
    <generator>Jekyll 3.6.2</generator>
    <lastBuildDate></lastBuildDate>
-   <atom:link href="/author/andrew/rss.xml" rel="self" type="application/rss+xml"/>
+   <atom:link href="./author/andrew/rss.xml" rel="self" type="application/rss+xml"/>
    <ttl>60</ttl>
    <atom:link href="rss" rel="self" type="application/rss+xml" />
    
 	<item>
 	  <title>Functions</title>
-	  <link>/functions</link>
+	  <link>./functions</link>
 		
 				
 						<author>Andrew R. McCluskey</author>
@@ -52,7 +52,7 @@
 				
 		
 	  <pubDate>2017-12-16T00:00:00+00:00</pubDate>
-	  <guid>/functions</guid>
+	  <guid>./functions</guid>
 	  <description><![CDATA[
 	     <p>This notebook introduces the concept of <strong>functions</strong> in terms of the Python language. I endevoured to use examples of <em>chemistry</em> related problems, but occasionally examples from physics or mathematics will come through.</p>
 
@@ -77,7 +77,7 @@
 
 	<item>
 	  <title>Loops</title>
-	  <link>/loops</link>
+	  <link>./loops</link>
 		
 				
 						<author>Andrew R. McCluskey</author>
@@ -88,7 +88,7 @@
 				
 		
 	  <pubDate>2017-12-16T00:00:00+00:00</pubDate>
-	  <guid>/loops</guid>
+	  <guid>./loops</guid>
 	  <description><![CDATA[
 	     <p>This notebook follows on from the <a href="/functions">functions</a> notebook. The aim here is to show the utility of <strong>loop</strong> in Python. Again I am aiming to use examples from <em>chemistry</em> related problems, but occasionally examples from physics and mathematics will come through.</p>
 

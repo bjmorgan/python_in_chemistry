@@ -3,9 +3,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
    
-      <title>/</title>
+      <title>./</title>
    
-   <link>/</link>
+   <link>./</link>
    <description>introducing Python to chemistry students</description>
    <language>en-uk</language>
    
@@ -15,21 +15,21 @@
    <description>
    <![CDATA[ introducing Python to chemistry students ]]>
    </description>
-   <link>/</link>
+   <link>./</link>
    <image>
-   <url>/assets/images/pic.png</url>
+   <url>./assets/images/pic.png</url>
    <title>python_in_chemistry</title>
-   <link>/</link>
+   <link>./</link>
    </image>
    <generator>Jekyll 3.6.2</generator>
    <lastBuildDate></lastBuildDate>
-   <atom:link href="/rss.xml" rel="self" type="application/rss+xml"/>
+   <atom:link href="./rss.xml" rel="self" type="application/rss+xml"/>
    <ttl>60</ttl>
    <atom:link href="rss" rel="self" type="application/rss+xml" />
    
 	<item>
 	  <title>Blackbody Radiation</title>
-	  <link>/blackbody-radiation</link>
+	  <link>./blackbody-radiation</link>
 		
 				
 		
@@ -40,7 +40,7 @@
 				
 		
 	  <pubDate>2017-12-16T00:00:00+00:00</pubDate>
-	  <guid>/blackbody-radiation</guid>
+	  <guid>./blackbody-radiation</guid>
 	  <description><![CDATA[
 	     <p>On the surface this notebook simply exemplfies the use of the <code>np.argmax</code> and <code>np.amax</code> functions, however it also includes a series of other delights:</p>
 
