@@ -3,9 +3,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
    
-      <title>./</title>
+      <title>/</title>
    
-   <link>./</link>
+   <link>/</link>
    <description>introducing Python to chemistry students</description>
    <language>en-uk</language>
    
@@ -27,21 +27,21 @@
    <description>
    <![CDATA[ introducing Python to chemistry students ]]>
    </description>
-   <link>./</link>
+   <link>/</link>
    <image>
-   <url>./assets/images/pic.png</url>
+   <url>/assets/images/pic.png</url>
    <title>Fiona Dickinson - python_in_chemistry</title>
-   <link>./</link>
+   <link>/</link>
    </image>
    <generator>Jekyll 3.6.2</generator>
    <lastBuildDate></lastBuildDate>
-   <atom:link href="./author/fiona/rss.xml" rel="self" type="application/rss+xml"/>
+   <atom:link href="/author/fiona/rss.xml" rel="self" type="application/rss+xml"/>
    <ttl>60</ttl>
    <atom:link href="rss" rel="self" type="application/rss+xml" />
    
 	<item>
 	  <title>Blackbody Radiation</title>
-	  <link>./blackbody-radiation</link>
+	  <link>/blackbody-radiation</link>
 		
 				
 		
@@ -52,7 +52,7 @@
 				
 		
 	  <pubDate>2017-12-16T00:00:00+00:00</pubDate>
-	  <guid>./blackbody-radiation</guid>
+	  <guid>/blackbody-radiation</guid>
 	  <description><![CDATA[
 	     <p>On the surface this notebook simply exemplfies the use of the <code>np.argmax</code> and <code>np.amax</code> functions, however it also includes a series of other delights:</p>
 
@@ -71,7 +71,7 @@
 
 	<item>
 	  <title>Running Jupyter Locally</title>
-	  <link>./running-jupyter-locally</link>
+	  <link>/running-jupyter-locally</link>
 		
 				
 		
@@ -82,7 +82,7 @@
 				
 		
 	  <pubDate>2017-12-16T00:00:00+00:00</pubDate>
-	  <guid>./running-jupyter-locally</guid>
+	  <guid>/running-jupyter-locally</guid>
 	  <description><![CDATA[
 	     <p>Although it is possible to run all of the pre-build resources on this site through the Binder utility (meaning that they are run on an external compute resources). You may want to try writing your on Jupyter notebooks and Python code.</p>
 

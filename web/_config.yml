@@ -6,7 +6,7 @@ language: 'en-uk'
 
 # edit baseurl to simply '/' if using as your personal page (instead of a project page)
 #baseurl: /python_in_chemistry/
-baseurl: ./
+baseurl: /
 #baseurl: Users/bjm42/Documents/Work/Teaching/python_in_chemistry/docs/
 
 # Website info
