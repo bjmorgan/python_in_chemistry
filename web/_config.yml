@@ -90,3 +90,4 @@ exclude:
   - .travis.yml
   - node_modules/term-size
   - update_web.py
+  - update_local.py
