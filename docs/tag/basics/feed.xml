@@ -182,11 +182,9 @@
 
 <p>The Pythonic way to <em>define</em> a function is:</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-<span class="k">def</span> <span class="nf">name_of_function</span><span class="p">(</span><span class="n">argument</span><span class="p">):</span>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">name_of_function</span><span class="p">(</span><span class="n">argument</span><span class="p">):</span>
     <span class="n">operation</span>
-    <span class="k">return</span> <span class="n">result</span>
-</code></pre></div></div>
+    <span class="k">return</span> <span class="n">result</span></code></pre></figure>
 
 <p>The <code class="highlighter-rouge">def</code> tells the computer that you are wanting to <strong>define</strong> a function, the <code class="highlighter-rouge">return</code> tells the computer that this is the thing that should be sent back to the where the function is called.</p>
 

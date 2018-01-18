@@ -27,12 +27,11 @@ A function in programming is very similar, it consists of arguments and returns 
 
 The Pythonic way to *define* a function is:
 
-```python
-
+{% highlight python %}
 def name_of_function(argument):
     operation
     return result
-```
+{% endhighlight %}
 
 The ```def``` tells the computer that you are wanting to **define** a function, the ```return``` tells the computer that this is the thing that should be sent back to the where the function is called. 
 
