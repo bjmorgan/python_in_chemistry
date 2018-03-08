@@ -3,3 +3,5 @@ numpy
 scipy
 mendeleev
 pandas
+pylj
+nglview
