@@ -8,6 +8,21 @@
     
       
       <item>
+        <title>Introduction to Molecular Dynamics for Neutron Scatters</title>
+        
+          <description>&lt;p&gt;This year I was invited to take part in the ISIS Neutron Training Course, a introductory course for neutron scattering scientists. The aim of our session was to introduce molecular dynamics and show how this could be applied to neutron scattering experiments. This involved a workshop showing how &lt;a href=&quot;http://people.bath.ac.uk/arm61/falass/&quot;&gt;falass&lt;/a&gt; could be used to analyse neutron reflectometry and an introdcutory lecture outlining molecular dynamics.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Thu, 08 Mar 2018 00:00:00 +0000</pubDate>
+        <link>
+        /introduction-to-md-ntc</link>
+        <guid isPermaLink="true">/introduction-to-md-ntc</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Working with Physical Constants and Units</title>
         
           <description>&lt;p&gt;A lot of the expressions that describe chemical phenomena involve physical constants, such as the speed of light, &lt;script type=&quot;math/tex&quot;&gt;c&lt;/script&gt;, Avogardo’s constant, &lt;script type=&quot;math/tex&quot;&gt;N_A&lt;/script&gt;, Planck’s constant, &lt;script type=&quot;math/tex&quot;&gt;h&lt;/script&gt;, and the Boltzmann constant, &lt;script type=&quot;math/tex&quot;&gt;k_B&lt;/script&gt;. When working with algebraic expressions, it is also important to keep track of the relevant units. Different experiments may conventionally report data in non-S.I. units and these units must be converted for comparing data or calculating chemical properties.&lt;/p&gt;
