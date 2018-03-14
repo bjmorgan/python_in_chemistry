@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+      <title>http://localhost:4000/</title>
+   
+   <link>http://localhost:4000/</link>
+   <description>introducing Python to chemistry students</description>
+   <language>en-uk</language>
+   
+   <title>
+   <![CDATA[ python_in_chemistry ]]>
+   </title>
+   <description>
+   <![CDATA[ introducing Python to chemistry students ]]>
+   </description>
+   <link>http://localhost:4000/</link>
+   <image>
+   <url>http://localhost:4000/assets/images/pic.png</url>
+   <title>python_in_chemistry</title>
+   <link>http://localhost:4000/</link>
+   </image>
+   <generator>Jekyll 3.6.2</generator>
+   <lastBuildDate></lastBuildDate>
+   <atom:link href="http://localhost:4000/rss.xml" rel="self" type="application/rss+xml"/>
+   <ttl>60</ttl>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+	  <title>Blackbody Radiation</title>
+	  <link>http://localhost:4000/blackbody-radiation</link>
+		
+				
+		
+				
+		
+				
+						<author>Fiona Dickinson</author>
+				
+		
+	  <pubDate>2017-12-16T00:00:00+00:00</pubDate>
+	  <guid>http://localhost:4000/blackbody-radiation</guid>
+	  <description><![CDATA[
+	     <p>On the surface this notebook simply exemplfies the use of the <code>np.argmax</code> and <code>np.amax</code> functions, however it also includes a series of other delights:</p>
+
+<ul>
+  <li>in addition to using <code>scipy.constants</code> and <code>matplotlib</code>, it shows using colours in the plots;</li>
+  <li>using functions is revisited;</li>
+  <li><code>print()</code> is joined by an example of created Markdown objects with code, so that units can be presented using LaTeX formatting.</li>
+</ul>
+
+<p>Check out the Blackbody Radiation notebook below.</p>
+
+<p><a href="https://mybinder.org/v2/gh/bjmorgan/python_in_chemistry/master?filepath=General%2FBlackbody%20radiation%20maximum%20values.ipynb">Run the notebook</a></p>
+
+	  ]]></description>
+	</item>
+
+
+</channel>
+</rss>

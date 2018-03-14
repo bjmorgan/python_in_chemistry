@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+      <title>http://localhost:4000/</title>
+   
+   <link>http://localhost:4000/</link>
+   <description>introducing Python to chemistry students</description>
+   <language>en-uk</language>
+   
+   <title>
+   <![CDATA[ python_in_chemistry ]]>
+   </title>
+   <description>
+   <![CDATA[ introducing Python to chemistry students ]]>
+   </description>
+   <link>http://localhost:4000/</link>
+   <image>
+   <url>http://localhost:4000/assets/images/pic.png</url>
+   <title>python_in_chemistry</title>
+   <link>http://localhost:4000/</link>
+   </image>
+   <generator>Jekyll 3.6.2</generator>
+   <lastBuildDate></lastBuildDate>
+   <atom:link href="http://localhost:4000/rss.xml" rel="self" type="application/rss+xml"/>
+   <ttl>60</ttl>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+	  <title>Working with Physical Constants and Units</title>
+	  <link>http://localhost:4000/working-with-physical-constants</link>
+		
+				
+		
+				
+						<author>Ben Morgan</author>
+				
+		
+				
+		
+	  <pubDate>2017-12-16T00:00:00+00:00</pubDate>
+	  <guid>http://localhost:4000/working-with-physical-constants</guid>
+	  <description><![CDATA[
+	     <p>A lot of the expressions that describe chemical phenomena involve physical constants, such as the speed of light, <script type="math/tex">c</script>, Avogardo’s constant, <script type="math/tex">N_A</script>, Planck’s constant, <script type="math/tex">h</script>, and the Boltzmann constant, <script type="math/tex">k_B</script>. When working with algebraic expressions, it is also important to keep track of the relevant units. Different experiments may conventionally report data in non-S.I. units and these units must be converted for comparing data or calculating chemical properties.</p>
+
+<p>While manipulating units manually (for example, when working through a problem by hand) is an important skill, if you are solving numerical problems using code you ideally want to avoid typing in unit conversions and values for constants. Any numbers that are typed in, are possible places where you could mistype. Mistakes in your code can hopefully be spotted when they produce errors, or from testing that your code produces a known result. Mistakes in numbers typed in are harder to spot, and can propogate through to your results.</p>
+
+<p>To reduce the change of introducing errors, there are two easy techniques you can follow:</p>
+
+<ul>
+  <li>Define your constants and unit conversions once by assigned them to variables (conventionally at the top of your code), rather than retyping them each time.</li>
+  <li>If possible, read constants and unit conversions automatically from databases.</li>
+</ul>
+
+<p>These techniques are illustrated in the notebook below, which shows how to use the <code>scipy.constants</code> database to work more conveniently with physical constants and unit conversions.</p>
+
+<p><a href="https://mybinder.org/v2/gh/bjmorgan/python_in_chemistry/master?filepath=General/Working%20with%20units%20and%20physical%20constants.ipynb">Run the notebook</a></p>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Running Jupyter Locally</title>
+	  <link>http://localhost:4000/running-jupyter-locally</link>
+		
+				
+		
+				
+		
+				
+						<author>Fiona Dickinson</author>
+				
+		
+	  <pubDate>2017-12-16T00:00:00+00:00</pubDate>
+	  <guid>http://localhost:4000/running-jupyter-locally</guid>
+	  <description><![CDATA[
+	     <p>Although it is possible to run all of the pre-build resources on this site through the Binder utility (meaning that they are run on an external compute resources). You may want to try writing your on Jupyter notebooks and Python code.</p>
+
+<p>In order to do that you will have to install Jupyter notebooks locally (e.g. on your own laptop or desktop). This can be achieved by downloading and installing <strong>Anaconda</strong>. This is available for Windows, macOS and Linux <a href="https://www.anaconda.com/download/">here</a>.</p>
+
+<p>Once installed the Jupyter notebooks can be opened, launching a new window in your web browser – this is the Jupyter file navigator. Using this you can navigate to the folder that interests you and open a new notebook using the ‘New’ selection box on the right and side.</p>
+
+<p>If you have any trouble getting Jupyter notebooks running locally, get in touch on <a href="https://twitter.com/pychembath">Twitter</a>.</p>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Loops</title>
+	  <link>http://localhost:4000/loops</link>
+		
+				
+						<author>Andrew R. McCluskey</author>
+				
+		
+				
+		
+				
+		
+	  <pubDate>2017-12-16T00:00:00+00:00</pubDate>
+	  <guid>http://localhost:4000/loops</guid>
+	  <description><![CDATA[
+	     <p>This notebook follows on from the <a href="/functions">functions</a> notebook. The aim here is to show the utility of <strong>loop</strong> in Python. Again I am aiming to use examples from <em>chemistry</em> related problems, but occasionally examples from physics and mathematics will come through.</p>
+
+<p>As is the case with many aspects of programming, the purpose of a loop is to allow programmers to <em>write less code</em>. This leads to the idiom that <em>computers are really good at doing the same thing over and over</em>, much better than humans.</p>
+
+<p>A loop really is just that, a way to tell the computer to perform the same task multiple times.</p>
+
+<p><a href="https://mybinder.org/v2/gh/bjmorgan/python_in_chemistry/master?filepath=General%2FLoops.ipynb">Run the notebook</a></p>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Getting Started</title>
+	  <link>http://localhost:4000/getting-started</link>
+		
+				
+		
+				
+						<author>Ben Morgan</author>
+				
+		
+				
+		
+	  <pubDate>2017-12-16T00:00:00+00:00</pubDate>
+	  <guid>http://localhost:4000/getting-started</guid>
+	  <description><![CDATA[
+	     <p>The best way to get started with python_in_chemistry is by working through the Data Analysis with Jupyter Notebooks series of notebooks. These will work through:</p>
+
+<ul>
+  <li>an introduction to Jupyter notebooks and allow you to run them online through Binder;</li>
+  <li>performing simple calculations, and using the <code>math</code> module;</li>
+  <li>working with variables;</li>
+  <li>different data types: integers and floats, strings, lists, and numpy arrays;</li>
+  <li>plotting data with <code>matplotlib</code>;</li>
+  <li>basic data analysis and statistics with numpy.</li>
+</ul>
+
+<p>These can be worked through from the links below:</p>
+
+<ol>
+  <li><a href="https://mybinder.org/v2/gh/bjmorgan/python_in_chemistry/master?filepath=Y1S1%20Practical%2FTutorial%201.ipynb">Tutorial 1</a></li>
+  <li><a href="https://mybinder.org/v2/gh/bjmorgan/python_in_chemistry/master?filepath=Y1S1%20Practical%2FTutorial%202.ipynb">Tutorial 2</a></li>
+  <li><a href="https://mybinder.org/v2/gh/bjmorgan/python_in_chemistry/master?filepath=Y1S1%20Practical%2FTutorial%203.ipynb">Tutorial 3</a></li>
+  <li><a href="https://mybinder.org/v2/gh/bjmorgan/python_in_chemistry/master?filepath=Y1S1%20Practical%2FTutorial%204.ipynb">Tutorial 4</a></li>
+  <li><a href="https://mybinder.org/v2/gh/bjmorgan/python_in_chemistry/master?filepath=Y1S1%20Practical%2FTutorial%205.ipynb">Tutorial 5</a></li>
+</ol>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Functions</title>
+	  <link>http://localhost:4000/functions</link>
+		
+				
+						<author>Andrew R. McCluskey</author>
+				
+		
+				
+		
+				
+		
+	  <pubDate>2017-12-16T00:00:00+00:00</pubDate>
+	  <guid>http://localhost:4000/functions</guid>
+	  <description><![CDATA[
+	     <p>Functions are a fundemental aspect of many programming languages. They allow a programmer to both simplify their code by hiding away many lines of code into a single line, while reducing the amount of work a programmer needs to do, if they need to do the same thing many times.</p>
+
+<p>The concept of a function will hopefully be familar from mathematics, e.g.</p>
+
+<script type="math/tex; mode=display">f(x)</script>
+
+<p>where, <script type="math/tex">f(x)</script> is some mathematical operation that acts on the argument <script type="math/tex">x</script>, while the details of the function are abstracted away. An example of a function is,</p>
+
+<script type="math/tex; mode=display">f(x) = x^2</script>
+
+<p>Using this we can say that <script type="math/tex">f(2) = 4</script>, <script type="math/tex">f(3)=9</script>, etc.</p>
+
+<p>A function in programming is very similar, it consists of arguments and returns a value after some operation has taken place.</p>
+
+<p>The Pythonic way to <em>define</em> a function is:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>def name_of_function(argument):
+    operation
+    return result
+</code></pre></div></div>
+
+<p>The <code class="highlighter-rouge">def</code> tells the computer that you are wanting to <strong>define</strong> a function, the <code class="highlighter-rouge">return</code> tells the computer that this is the thing that should be sent back to the where the function is called.</p>
+
+<p>The use of <strong>functions</strong> is an important paradigm in programming – the following Jupyter notebook gives some examples of functions and how they can be used.</p>
+
+<p><a href="https://mybinder.org/v2/gh/bjmorgan/python_in_chemistry/master?filepath=General%2FFunctions.ipynb">Run the notebook</a></p>
+
+	  ]]></description>
+	</item>
+
+
+</channel>
+</rss>

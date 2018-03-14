@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+      <title>http://localhost:4000/</title>
+   
+   <link>http://localhost:4000/</link>
+   <description>introducing Python to chemistry students</description>
+   <language>en-uk</language>
+   
+      
+            
+      
+            
+               
+               
+                  <managingEditor>Ben Morgan</managingEditor>
+            
+      
+            
+      
+   
+   <title>
+   <![CDATA[ Ben Morgan - python_in_chemistry ]]>
+   </title>
+   <description>
+   <![CDATA[ introducing Python to chemistry students ]]>
+   </description>
+   <link>http://localhost:4000/</link>
+   <image>
+   <url>http://localhost:4000/assets/images/pic.png</url>
+   <title>Ben Morgan - python_in_chemistry</title>
+   <link>http://localhost:4000/</link>
+   </image>
+   <generator>Jekyll 3.6.2</generator>
+   <lastBuildDate></lastBuildDate>
+   <atom:link href="http://localhost:4000/author/ben/rss.xml" rel="self" type="application/rss+xml"/>
+   <ttl>60</ttl>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+	  <title>Getting Started</title>
+	  <link>http://localhost:4000/getting-started</link>
+		
+				
+		
+				
+						<author>Ben Morgan</author>
+				
+		
+				
+		
+	  <pubDate>2017-12-16T00:00:00+00:00</pubDate>
+	  <guid>http://localhost:4000/getting-started</guid>
+	  <description><![CDATA[
+	     <p>The best way to get started with python_in_chemistry is by working through the Data Analysis with Jupyter Notebooks series of notebooks. These will work through:</p>
+
+<ul>
+  <li>an introduction to Jupyter notebooks and allow you to run them online through Binder;</li>
+  <li>performing simple calculations, and using the <code>math</code> module;</li>
+  <li>working with variables;</li>
+  <li>different data types: integers and floats, strings, lists, and numpy arrays;</li>
+  <li>plotting data with <code>matplotlib</code>;</li>
+  <li>basic data analysis and statistics with numpy.</li>
+</ul>
+
+<p>These can be worked through from the links below:</p>
+
+<ol>
+  <li><a href="https://mybinder.org/v2/gh/bjmorgan/python_in_chemistry/master?filepath=Y1S1%20Practical%2FTutorial%201.ipynb">Tutorial 1</a></li>
+  <li><a href="https://mybinder.org/v2/gh/bjmorgan/python_in_chemistry/master?filepath=Y1S1%20Practical%2FTutorial%202.ipynb">Tutorial 2</a></li>
+  <li><a href="https://mybinder.org/v2/gh/bjmorgan/python_in_chemistry/master?filepath=Y1S1%20Practical%2FTutorial%203.ipynb">Tutorial 3</a></li>
+  <li><a href="https://mybinder.org/v2/gh/bjmorgan/python_in_chemistry/master?filepath=Y1S1%20Practical%2FTutorial%204.ipynb">Tutorial 4</a></li>
+  <li><a href="https://mybinder.org/v2/gh/bjmorgan/python_in_chemistry/master?filepath=Y1S1%20Practical%2FTutorial%205.ipynb">Tutorial 5</a></li>
+</ol>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Working with Physical Constants and Units</title>
+	  <link>http://localhost:4000/working-with-physical-constants</link>
+		
+				
+		
+				
+						<author>Ben Morgan</author>
+				
+		
+				
+		
+	  <pubDate>2017-12-16T00:00:00+00:00</pubDate>
+	  <guid>http://localhost:4000/working-with-physical-constants</guid>
+	  <description><![CDATA[
+	     <p>A lot of the expressions that describe chemical phenomena involve physical constants, such as the speed of light, <script type="math/tex">c</script>, Avogardo’s constant, <script type="math/tex">N_A</script>, Planck’s constant, <script type="math/tex">h</script>, and the Boltzmann constant, <script type="math/tex">k_B</script>. When working with algebraic expressions, it is also important to keep track of the relevant units. Different experiments may conventionally report data in non-S.I. units and these units must be converted for comparing data or calculating chemical properties.</p>
+
+<p>While manipulating units manually (for example, when working through a problem by hand) is an important skill, if you are solving numerical problems using code you ideally want to avoid typing in unit conversions and values for constants. Any numbers that are typed in, are possible places where you could mistype. Mistakes in your code can hopefully be spotted when they produce errors, or from testing that your code produces a known result. Mistakes in numbers typed in are harder to spot, and can propogate through to your results.</p>
+
+<p>To reduce the change of introducing errors, there are two easy techniques you can follow:</p>
+
+<ul>
+  <li>Define your constants and unit conversions once by assigned them to variables (conventionally at the top of your code), rather than retyping them each time.</li>
+  <li>If possible, read constants and unit conversions automatically from databases.</li>
+</ul>
+
+<p>These techniques are illustrated in the notebook below, which shows how to use the <code>scipy.constants</code> database to work more conveniently with physical constants and unit conversions.</p>
+
+<p><a href="https://mybinder.org/v2/gh/bjmorgan/python_in_chemistry/master?filepath=General/Working%20with%20units%20and%20physical%20constants.ipynb">Run the notebook</a></p>
+
+	  ]]></description>
+	</item>
+
+
+</channel>
+</rss>

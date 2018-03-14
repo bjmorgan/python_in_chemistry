@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title> - Articles</title>
+    <description>introducing Python to chemistry students</description>
+    <link>
+    http://localhost:4000</link>
+    
+      
+      <item>
+        <title>Working with Physical Constants and Units</title>
+        
+          <description>&lt;p&gt;A lot of the expressions that describe chemical phenomena involve physical constants, such as the speed of light, &lt;script type=&quot;math/tex&quot;&gt;c&lt;/script&gt;, Avogardo’s constant, &lt;script type=&quot;math/tex&quot;&gt;N_A&lt;/script&gt;, Planck’s constant, &lt;script type=&quot;math/tex&quot;&gt;h&lt;/script&gt;, and the Boltzmann constant, &lt;script type=&quot;math/tex&quot;&gt;k_B&lt;/script&gt;. When working with algebraic expressions, it is also important to keep track of the relevant units. Different experiments may conventionally report data in non-S.I. units and these units must be converted for comparing data or calculating chemical properties.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sat, 16 Dec 2017 00:00:00 +0000</pubDate>
+        <link>
+        http://localhost:4000/working-with-physical-constants</link>
+        <guid isPermaLink="true">http://localhost:4000/working-with-physical-constants</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Running Jupyter Locally</title>
+        
+          <description>&lt;p&gt;Although it is possible to run all of the pre-build resources on this site through the Binder utility (meaning that they are run on an external compute resources). You may want to try writing your on Jupyter notebooks and Python code.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sat, 16 Dec 2017 00:00:00 +0000</pubDate>
+        <link>
+        http://localhost:4000/running-jupyter-locally</link>
+        <guid isPermaLink="true">http://localhost:4000/running-jupyter-locally</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Loops</title>
+        
+          <description>&lt;p&gt;This notebook follows on from the &lt;a href=&quot;/functions&quot;&gt;functions&lt;/a&gt; notebook. The aim here is to show the utility of &lt;strong&gt;loop&lt;/strong&gt; in Python. Again I am aiming to use examples from &lt;em&gt;chemistry&lt;/em&gt; related problems, but occasionally examples from physics and mathematics will come through.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sat, 16 Dec 2017 00:00:00 +0000</pubDate>
+        <link>
+        http://localhost:4000/loops</link>
+        <guid isPermaLink="true">http://localhost:4000/loops</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Getting Started</title>
+        
+          <description>&lt;p&gt;The best way to get started with python_in_chemistry is by working through the Data Analysis with Jupyter Notebooks series of notebooks. These will work through:&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sat, 16 Dec 2017 00:00:00 +0000</pubDate>
+        <link>
+        http://localhost:4000/getting-started</link>
+        <guid isPermaLink="true">http://localhost:4000/getting-started</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Functions</title>
+        
+          <description>&lt;p&gt;Functions are a fundemental aspect of many programming languages. They allow a programmer to both simplify their code by hiding away many lines of code into a single line, while reducing the amount of work a programmer needs to do, if they need to do the same thing many times.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sat, 16 Dec 2017 00:00:00 +0000</pubDate>
+        <link>
+        http://localhost:4000/functions</link>
+        <guid isPermaLink="true">http://localhost:4000/functions</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Blackbody Radiation</title>
+        
+          <description>&lt;p&gt;On the surface this notebook simply exemplfies the use of the &lt;code&gt;np.argmax&lt;/code&gt; and &lt;code&gt;np.amax&lt;/code&gt; functions, however it also includes a series of other delights:&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sat, 16 Dec 2017 00:00:00 +0000</pubDate>
+        <link>
+        http://localhost:4000/blackbody-radiation</link>
+        <guid isPermaLink="true">http://localhost:4000/blackbody-radiation</guid>
+      </item>
+      
+    
+  </channel>
+</rss>

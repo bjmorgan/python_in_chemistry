@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+      <title>http://localhost:4000/</title>
+   
+   <link>http://localhost:4000/</link>
+   <description>introducing Python to chemistry students</description>
+   <language>en-uk</language>
+   
+      
+            
+               
+               
+                  <managingEditor>Andrew R. McCluskey</managingEditor>
+            
+      
+            
+      
+            
+      
+   
+   <title>
+   <![CDATA[ Andrew R. McCluskey - python_in_chemistry ]]>
+   </title>
+   <description>
+   <![CDATA[ introducing Python to chemistry students ]]>
+   </description>
+   <link>http://localhost:4000/</link>
+   <image>
+   <url>http://localhost:4000/assets/images/pic.png</url>
+   <title>Andrew R. McCluskey - python_in_chemistry</title>
+   <link>http://localhost:4000/</link>
+   </image>
+   <generator>Jekyll 3.6.2</generator>
+   <lastBuildDate></lastBuildDate>
+   <atom:link href="http://localhost:4000/author/andrew/rss.xml" rel="self" type="application/rss+xml"/>
+   <ttl>60</ttl>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+	  <title>Functions</title>
+	  <link>http://localhost:4000/functions</link>
+		
+				
+						<author>Andrew R. McCluskey</author>
+				
+		
+				
+		
+				
+		
+	  <pubDate>2017-12-16T00:00:00+00:00</pubDate>
+	  <guid>http://localhost:4000/functions</guid>
+	  <description><![CDATA[
+	     <p>Functions are a fundemental aspect of many programming languages. They allow a programmer to both simplify their code by hiding away many lines of code into a single line, while reducing the amount of work a programmer needs to do, if they need to do the same thing many times.</p>
+
+<p>The concept of a function will hopefully be familar from mathematics, e.g.</p>
+
+<script type="math/tex; mode=display">f(x)</script>
+
+<p>where, <script type="math/tex">f(x)</script> is some mathematical operation that acts on the argument <script type="math/tex">x</script>, while the details of the function are abstracted away. An example of a function is,</p>
+
+<script type="math/tex; mode=display">f(x) = x^2</script>
+
+<p>Using this we can say that <script type="math/tex">f(2) = 4</script>, <script type="math/tex">f(3)=9</script>, etc.</p>
+
+<p>A function in programming is very similar, it consists of arguments and returns a value after some operation has taken place.</p>
+
+<p>The Pythonic way to <em>define</em> a function is:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>def name_of_function(argument):
+    operation
+    return result
+</code></pre></div></div>
+
+<p>The <code class="highlighter-rouge">def</code> tells the computer that you are wanting to <strong>define</strong> a function, the <code class="highlighter-rouge">return</code> tells the computer that this is the thing that should be sent back to the where the function is called.</p>
+
+<p>The use of <strong>functions</strong> is an important paradigm in programming – the following Jupyter notebook gives some examples of functions and how they can be used.</p>
+
+<p><a href="https://mybinder.org/v2/gh/bjmorgan/python_in_chemistry/master?filepath=General%2FFunctions.ipynb">Run the notebook</a></p>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Loops</title>
+	  <link>http://localhost:4000/loops</link>
+		
+				
+						<author>Andrew R. McCluskey</author>
+				
+		
+				
+		
+				
+		
+	  <pubDate>2017-12-16T00:00:00+00:00</pubDate>
+	  <guid>http://localhost:4000/loops</guid>
+	  <description><![CDATA[
+	     <p>This notebook follows on from the <a href="/functions">functions</a> notebook. The aim here is to show the utility of <strong>loop</strong> in Python. Again I am aiming to use examples from <em>chemistry</em> related problems, but occasionally examples from physics and mathematics will come through.</p>
+
+<p>As is the case with many aspects of programming, the purpose of a loop is to allow programmers to <em>write less code</em>. This leads to the idiom that <em>computers are really good at doing the same thing over and over</em>, much better than humans.</p>
+
+<p>A loop really is just that, a way to tell the computer to perform the same task multiple times.</p>
+
+<p><a href="https://mybinder.org/v2/gh/bjmorgan/python_in_chemistry/master?filepath=General%2FLoops.ipynb">Run the notebook</a></p>
+
+	  ]]></description>
+	</item>
+
+
+</channel>
+</rss>
