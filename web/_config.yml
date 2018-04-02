@@ -89,6 +89,7 @@ exclude:
   - vendor
   - .travis.yml
   - node_modules/balanced-match
+  - node_modules/brace-expansion
   - node_modules/term-size
   - update_web.py
   - update_local.py
