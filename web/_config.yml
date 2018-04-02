@@ -90,6 +90,7 @@ exclude:
   - .travis.yml
   - node_modules/balanced-match
   - node_modules/brace-expansion
+  - node_modules/decode-uri-component
   - node_modules/term-size
   - update_web.py
   - update_local.py
