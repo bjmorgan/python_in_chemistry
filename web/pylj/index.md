@@ -10,3 +10,7 @@ subclass: 'post page'
 
 pylj is a Python package developed by [Andrew](http://people.bath.ac.uk/arm61) aimed as a teaching aid for molecular simulation in undergraduate laboratories. 
 
+The source code can be found at the following GitHub repository:
+[https://github.com/arm61/pylj](https://github.com/arm61/pylj)
+
+Some examples of usage will be posted online in the future. 
