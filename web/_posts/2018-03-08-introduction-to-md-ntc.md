@@ -17,4 +17,4 @@ To deliver this lecture, I decided to develop a small python utility (still very
 
 It should be noted that the pylj (the MD package) is not perfect and possibly will cause the notebook to crash occasionally. Further due to the computationally intensive nature of MD, I recommend downloading the notebook, installing pylj via pip and running the notebook on your machine. Finally, make sure to also download the additional_code.py file as this makes the plotting easier.
 
-[Download](https://github.com/bjmorgan/python_in_chemistry/blob/master/Neutron_training_Course) 
+[Download](https://github.com/bjmorgan/python_in_chemistry/tree/master/Neutron_training_Course) 
