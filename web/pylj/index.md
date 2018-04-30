@@ -15,6 +15,6 @@ If you are interested in using pylj, please drop [Andrew](mailto:arm61@bath.ac.u
 
 A rough example which aims to give an impression of how pylj could be used in an undergraduate teachinig laboratory can be downloaded here:
 
-- [Ideal Gaw Law](https://github.com/bjmorgan/python_in_chemistry/raw/master/pylj/ideal_gas_law.ipynb)
+- [Ideal Gaw Law](https://github.com/bjmorgan/python_in_chemistry/raw/master/pylj/ideal_gas_law.ipynb) (right-click and download)
 
 Over time more examples will be added and the current examples will be cleaned up. 
