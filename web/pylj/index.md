@@ -8,7 +8,7 @@ class: page-template
 subclass: 'post page'
 ---
 
-pylj is a Python package developed by [Andrew](http://people.bath.ac.uk/arm61) aimed as a teaching aid for molecular simulation in undergraduate laboratories. 
+pylj is a Python package developed by [Andrew](http://people.bath.ac.uk/arm61) aimed as a teaching aid for classical simulation. There is more information about pylj available on [this poster](https://github.com/arm61/pylj/raw/master/pylj_poster.pdf). 
 
 If you are interested in using pylj, please drop [Andrew](mailto:arm61@bath.ac.uk) an email or fork the source code, which can be found at the following GitHub repository:
 [https://github.com/arm61/pylj](https://github.com/arm61/pylj)
