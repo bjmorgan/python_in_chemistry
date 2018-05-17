@@ -34,7 +34,7 @@
 				
 		
 				
-						<author>Ben Morgan</author>
+						<author>Benjamin Morgan</author>
 				
 		
 				
@@ -91,7 +91,7 @@
 	  <link>http://localhost:4000/loops</link>
 		
 				
-						<author>Andrew R. McCluskey</author>
+						<author>Andrew McCluskey</author>
 				
 		
 				
@@ -119,7 +119,7 @@
 				
 		
 				
-						<author>Ben Morgan</author>
+						<author>Benjamin Morgan</author>
 				
 		
 				
@@ -156,7 +156,7 @@
 	  <link>http://localhost:4000/functions</link>
 		
 				
-						<author>Andrew R. McCluskey</author>
+						<author>Andrew McCluskey</author>
 				
 		
 				
@@ -166,7 +166,7 @@
 	  <pubDate>2017-12-16T00:00:00+00:00</pubDate>
 	  <guid>http://localhost:4000/functions</guid>
 	  <description><![CDATA[
-	     <p>Functions are a fundemental aspect of many programming languages. They allow a programmer to both simplify their code by hiding away many lines of code into a single line, while reducing the amount of work a programmer needs to do, if they need to do the same thing many times.</p>
+	     <p>Functions are a fundamental aspect of many programming languages. They allow a programmer to both simplify their code by hiding away many lines of code into a single line, while reducing the amount of work a programmer needs to do, if they need to do the same thing many times.</p>
 
 <p>The concept of a function will hopefully be familar from mathematics, e.g.</p>
 
@@ -182,9 +182,9 @@
 
 <p>The Pythonic way to <em>define</em> a function is:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>def name_of_function(argument):
-    operation
-    return result
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">name_of_function</span><span class="p">(</span><span class="n">argument</span><span class="p">):</span>
+    <span class="n">operation</span>
+    <span class="k">return</span> <span class="n">result</span>
 </code></pre></div></div>
 
 <p>The <code class="highlighter-rouge">def</code> tells the computer that you are wanting to <strong>define</strong> a function, the <code class="highlighter-rouge">return</code> tells the computer that this is the thing that should be sent back to the where the function is called.</p>

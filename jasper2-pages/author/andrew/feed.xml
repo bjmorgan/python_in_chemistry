@@ -13,7 +13,7 @@
             
                
                
-                  <managingEditor>Andrew R. McCluskey</managingEditor>
+                  <managingEditor>Andrew McCluskey</managingEditor>
             
       
             
@@ -22,7 +22,7 @@
       
    
    <title>
-   <![CDATA[ Andrew R. McCluskey - python_in_chemistry ]]>
+   <![CDATA[ Andrew McCluskey - python_in_chemistry ]]>
    </title>
    <description>
    <![CDATA[ introducing Python to chemistry students ]]>
@@ -30,7 +30,7 @@
    <link>http://localhost:4000/</link>
    <image>
    <url>http://localhost:4000/assets/images/pic.png</url>
-   <title>Andrew R. McCluskey - python_in_chemistry</title>
+   <title>Andrew McCluskey - python_in_chemistry</title>
    <link>http://localhost:4000/</link>
    </image>
    <generator>Jekyll 3.6.2</generator>
@@ -40,11 +40,37 @@
    <atom:link href="rss" rel="self" type="application/rss+xml" />
    
 	<item>
+	  <title>Introduction to Molecular Dynamics for Neutron Scatters</title>
+	  <link>http://localhost:4000/introduction-to-md-ntc</link>
+		
+				
+						<author>Andrew McCluskey</author>
+				
+		
+				
+		
+				
+		
+	  <pubDate>2018-03-08T00:00:00+00:00</pubDate>
+	  <guid>http://localhost:4000/introduction-to-md-ntc</guid>
+	  <description><![CDATA[
+	     <p>This year I was invited to take part in the ISIS Neutron Training Course, a introductory course for neutron scattering scientists. The aim of our session was to introduce molecular dynamics and show how this could be applied to neutron scattering experiments. This involved a workshop showing how <a href="http://people.bath.ac.uk/arm61/falass/">falass</a> could be used to analyse neutron reflectometry and an introdcutory lecture outlining molecular dynamics.</p>
+
+<p>To deliver this lecture, I decided to develop a small python utility (still very alpha in development) that performs simple 2D argon simulations and provides visualisation that is both supported by Jupyter and easily extensible. The attached notebook is the result of this course.</p>
+
+<p>It should be noted that the pylj (the MD package) is not perfect and possibly will cause the notebook to crash occasionally. Further due to the computationally intensive nature of MD, I recommend downloading the notebook, installing pylj via pip and running the notebook on your machine. Finally, make sure to also download the additional_code.py file as this makes the plotting easier.</p>
+
+<p><a href="https://github.com/bjmorgan/python_in_chemistry/tree/master/Neutron_training_Course">Download</a></p>
+
+	  ]]></description>
+	</item>
+
+	<item>
 	  <title>Functions</title>
 	  <link>http://localhost:4000/functions</link>
 		
 				
-						<author>Andrew R. McCluskey</author>
+						<author>Andrew McCluskey</author>
 				
 		
 				
@@ -54,7 +80,7 @@
 	  <pubDate>2017-12-16T00:00:00+00:00</pubDate>
 	  <guid>http://localhost:4000/functions</guid>
 	  <description><![CDATA[
-	     <p>Functions are a fundemental aspect of many programming languages. They allow a programmer to both simplify their code by hiding away many lines of code into a single line, while reducing the amount of work a programmer needs to do, if they need to do the same thing many times.</p>
+	     <p>Functions are a fundamental aspect of many programming languages. They allow a programmer to both simplify their code by hiding away many lines of code into a single line, while reducing the amount of work a programmer needs to do, if they need to do the same thing many times.</p>
 
 <p>The concept of a function will hopefully be familar from mathematics, e.g.</p>
 
@@ -70,9 +96,9 @@
 
 <p>The Pythonic way to <em>define</em> a function is:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>def name_of_function(argument):
-    operation
-    return result
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">name_of_function</span><span class="p">(</span><span class="n">argument</span><span class="p">):</span>
+    <span class="n">operation</span>
+    <span class="k">return</span> <span class="n">result</span>
 </code></pre></div></div>
 
 <p>The <code class="highlighter-rouge">def</code> tells the computer that you are wanting to <strong>define</strong> a function, the <code class="highlighter-rouge">return</code> tells the computer that this is the thing that should be sent back to the where the function is called.</p>
@@ -89,7 +115,7 @@
 	  <link>http://localhost:4000/loops</link>
 		
 				
-						<author>Andrew R. McCluskey</author>
+						<author>Andrew McCluskey</author>
 				
 		
 				
