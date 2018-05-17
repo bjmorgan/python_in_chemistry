@@ -24,5 +24,7 @@ pip install pylj
 Finally, make sure to also download the additional_code.py file as this makes the plotting easier (make sure that the additional_code.py file is in the same folder as the lecture when you launch the Jupyter notebook).
 
 [Download Lecture](https://raw.githubusercontent.com/bjmorgan/python_in_chemistry/master/Neutron_Training_Course/lecture.ipynb)
+
 [Download additional_code](https://raw.githubusercontent.com/bjmorgan/python_in_chemistry/master/Neutron_Training_Course/additional_code.py)
+
 (Right click and download the files) 
