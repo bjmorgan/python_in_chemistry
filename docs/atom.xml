@@ -8,6 +8,21 @@
     
       
       <item>
+        <title>pylj</title>
+        
+          <description>&lt;p&gt;&lt;a href=&quot;http://pythoninchemistry.org/author/andrew/&quot;&gt;Andrew&lt;/a&gt; has developed a small teaching utility designed to introduce students to molecular dynamics. He is currently in the process of trying to develop some example applications in the form of laboratory exercises. In the meantime, more information can be found &lt;a href=&quot;http://pythoninchemistry.org/pylj&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Fri, 18 May 2018 00:00:00 +0100</pubDate>
+        <link>
+        /pylj</link>
+        <guid isPermaLink="true">/pylj</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Introduction to Molecular Dynamics for Neutron Scatters</title>
         
           <description>&lt;p&gt;This year I was invited to take part in the ISIS Neutron Training Course, a introductory course for neutron scattering scientists. The aim of our session was to introduce molecular dynamics and show how this could be applied to neutron scattering experiments. This involved a workshop showing how &lt;a href=&quot;http://people.bath.ac.uk/arm61/falass/&quot;&gt;falass&lt;/a&gt; could be used to analyse neutron reflectometry and an introdcutory lecture outlining molecular dynamics.&lt;/p&gt;
