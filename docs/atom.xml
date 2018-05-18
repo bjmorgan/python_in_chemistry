@@ -8,7 +8,7 @@
     
       
       <item>
-        <title>pylj</title>
+        <title>pylj launch</title>
         
           <description>&lt;p&gt;&lt;a href=&quot;http://pythoninchemistry.org/author/andrew/&quot;&gt;Andrew&lt;/a&gt; has developed a small teaching utility designed to introduce students to molecular dynamics. He is currently in the process of trying to develop some example applications in the form of laboratory exercises. In the meantime, more information can be found &lt;a href=&quot;http://pythoninchemistry.org/pylj&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
@@ -16,8 +16,8 @@
         
         <pubDate>Fri, 18 May 2018 00:00:00 +0100</pubDate>
         <link>
-        /pylj</link>
-        <guid isPermaLink="true">/pylj</guid>
+        /pylj-launch</link>
+        <guid isPermaLink="true">/pylj-launch</guid>
       </item>
       
     
