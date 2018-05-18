@@ -3,7 +3,7 @@ layout: post
 current: post
 #cover:  assets/images/welcome.jpg
 navigation: True
-title: pylj launch 
+title: pylj Launch 
 date: 2018-05-18
 tags: [Tools]
 class: post-template
