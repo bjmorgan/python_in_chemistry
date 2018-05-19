@@ -27,4 +27,6 @@ Finally, make sure to also download the additional_code.py file as this makes th
 
 [Download additional_code](https://raw.githubusercontent.com/bjmorgan/python_in_chemistry/master/Neutron_Training_Course/additional_code.py)
 
-(Right click and download the files) 
+(Right click and download the files)
+
+There is currently a server running on which the lecture can be worked through. However, this may be taken down whenever it stops being cost-effective. Check that out [here](http://35.192.230.120/v2/gh/arm61/test_binder/master).
