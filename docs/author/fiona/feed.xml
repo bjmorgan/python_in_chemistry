@@ -51,7 +51,7 @@
 						<author>Fiona Dickinson</author>
 				
 		
-	  <pubDate>2017-12-16T00:00:00+00:00</pubDate>
+	  <pubDate>2017-12-16T00:00:00+01:00</pubDate>
 	  <guid>/blackbody-radiation</guid>
 	  <description><![CDATA[
 	     <p>On the surface this notebook simply exemplfies the use of the <code>np.argmax</code> and <code>np.amax</code> functions, however it also includes a series of other delights:</p>
@@ -81,7 +81,7 @@
 						<author>Fiona Dickinson</author>
 				
 		
-	  <pubDate>2017-12-16T00:00:00+00:00</pubDate>
+	  <pubDate>2017-12-16T00:00:00+01:00</pubDate>
 	  <guid>/running-jupyter-locally</guid>
 	  <description><![CDATA[
 	     <p>Although it is possible to run all of the pre-build resources on this site through the Binder utility (meaning that they are run on an external compute resources). You may want to try writing your on Jupyter notebooks and Python code.</p>

@@ -51,7 +51,7 @@
 		
 				
 		
-	  <pubDate>2017-12-16T00:00:00+00:00</pubDate>
+	  <pubDate>2017-12-16T00:00:00+01:00</pubDate>
 	  <guid>/getting-started</guid>
 	  <description><![CDATA[
 	     <p>The best way to get started with python_in_chemistry is by working through the Data Analysis with Jupyter Notebooks series of notebooks. These will work through:</p>
@@ -90,7 +90,7 @@
 		
 				
 		
-	  <pubDate>2017-12-16T00:00:00+00:00</pubDate>
+	  <pubDate>2017-12-16T00:00:00+01:00</pubDate>
 	  <guid>/working-with-physical-constants</guid>
 	  <description><![CDATA[
 	     <p>A lot of the expressions that describe chemical phenomena involve physical constants, such as the speed of light, <script type="math/tex">c</script>, Avogardo’s constant, <script type="math/tex">N_A</script>, Planck’s constant, <script type="math/tex">h</script>, and the Boltzmann constant, <script type="math/tex">k_B</script>. When working with algebraic expressions, it is also important to keep track of the relevant units. Different experiments may conventionally report data in non-S.I. units and these units must be converted for comparing data or calculating chemical properties.</p>

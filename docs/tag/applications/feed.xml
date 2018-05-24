@@ -39,7 +39,7 @@
 		
 				
 		
-	  <pubDate>2018-03-08T00:00:00+00:00</pubDate>
+	  <pubDate>2018-03-08T00:00:00+01:00</pubDate>
 	  <guid>/introduction-to-md-ntc</guid>
 	  <description><![CDATA[
 	     <p>This year I was invited to take part in the ISIS Neutron Training Course, a introductory course for neutron scattering scientists. The aim of our session was to introduce molecular dynamics and show how this could be applied to neutron scattering experiments. This involved a workshop showing how <a href="http://people.bath.ac.uk/arm61/falass/">falass</a> could be used to analyse neutron reflectometry and an introdcutory lecture outlining molecular dynamics.</p>
@@ -59,7 +59,7 @@
 
 <p>(Right click and download the files)</p>
 
-<p>There is currently a server running on which the lecture can be worked through. However, this may be taken down whenever it stops being cost-effective. Check that out <a href="http://35.192.230.120/v2/gh/arm61/test_binder/master">here</a>.</p>
+<p>There is currently a server running on which the lecture can be worked through. However, this may be taken down whenever it stops being cost-effective. Check that out <a href="http://35.232.49.174/v2/gh/arm61/test_binder/master">here</a>.</p>
 
 	  ]]></description>
 	</item>
@@ -76,7 +76,7 @@
 						<author>Fiona Dickinson</author>
 				
 		
-	  <pubDate>2017-12-16T00:00:00+00:00</pubDate>
+	  <pubDate>2017-12-16T00:00:00+01:00</pubDate>
 	  <guid>/blackbody-radiation</guid>
 	  <description><![CDATA[
 	     <p>On the surface this notebook simply exemplfies the use of the <code>np.argmax</code> and <code>np.amax</code> functions, however it also includes a series of other delights:</p>
