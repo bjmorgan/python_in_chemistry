@@ -29,4 +29,4 @@ Finally, make sure to also download the additional_code.py file as this makes th
 
 (Right click and download the files)
 
-There is currently a server running on which the lecture can be worked through. However, this may be taken down whenever it stops being cost-effective. Check that out [here](http://35.232.49.174/v2/gh/arm61/test_binder/master).
+There is currently a server running on which the lecture can be worked through. However, this may be taken down whenever it stops being cost-effective. Check that out [here](http://35.202.6.198/v2/gh/arm61/test_binder/master).
