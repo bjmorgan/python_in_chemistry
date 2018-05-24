@@ -118,7 +118,7 @@
 
 <p>This arrow incidates which line the error occured on, and is extremely useful as codes become become larger and more convoluted. In the above example the line indicates that the error has arisen on the line <code class="highlighter-rouge">a = np.append(a, 11, 19)</code>, and following investigation of the <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.append.html"><code class="highlighter-rouge">np.append()</code> documentation</a>, we can discover that the incorrect syntax has been used. The second argument needs to be an array (or list) if both numbers are to be added. The number <code class="highlighter-rouge">19</code> was understood to the be <em>axis</em> argument, for which 19 was not an allowed value. The line above features the correct syntax, hence there was no error found.</p>
 
-<p>This of course is only the tip of the iceberg of error tracebacks and the amount of information available in them. But, hopefully this means I stop being asked that same question 50 times a week.</p>
+<p>This of course is only the tip of the iceberg of error tracebacks and the amount of information available in them. But, hopefully this means people can spend less time waiting for me to help and more time debugging code yourself.</p>
 
 	  ]]></description>
 	</item>
