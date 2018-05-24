@@ -8,6 +8,21 @@
     
       
       <item>
+        <title>Errors and Debugging</title>
+        
+          <description>&lt;p&gt;While teaching Python for data analysis in the first- and second-year computational labs in Bath, one of the most common questions I receive from students can be answered with this simple response:&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Thu, 24 May 2018 00:00:00 +0100</pubDate>
+        <link>
+        /errors-and-debugging</link>
+        <guid isPermaLink="true">/errors-and-debugging</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>pylj Launch</title>
         
           <description>&lt;p&gt;&lt;a href=&quot;http://pythoninchemistry.org/author/andrew/&quot;&gt;Andrew&lt;/a&gt; has developed a small teaching utility designed to introduce students to molecular dynamics. He is currently in the process of trying to develop some example applications in the form of laboratory exercises. In the meantime, more information can be found &lt;a href=&quot;http://pythoninchemistry.org/pylj&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
