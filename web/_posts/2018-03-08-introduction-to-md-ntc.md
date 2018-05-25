@@ -29,4 +29,4 @@ Finally, make sure to also download the additional_code.py file as this makes th
 
 (Right click and download the files)
 
-There is currently a server running on which the lecture can be worked through. However, a password is needed, please email Andrew to gain access (arm61 'at' bath.ac.uk). Check that out [here](http://35.230.133.1/notebook/notebooks/lecture.ipynb).
+There is currently a server running on which the lecture can be worked through. However, a password is needed, please email Andrew to gain access (arm61 'at' bath.ac.uk). Check that out [here](http://35.230.133.1/notebook/NTC/lecture.ipynb).
