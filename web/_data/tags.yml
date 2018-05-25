@@ -7,8 +7,3 @@ applications:
   name: applications
   description: python, in action, in chemistry
   cover: False
-
-tools:
-  name: tools
-  description: pieces of python we can use to teach
-  cover: False

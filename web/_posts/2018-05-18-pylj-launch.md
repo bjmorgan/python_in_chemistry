@@ -5,9 +5,9 @@ current: post
 navigation: True
 title: pylj Launch 
 date: 2018-05-18
-tags: [Tools]
+tags: [Applications]
 class: post-template
-subclass: 'post tag-tools'
+subclass: 'post tag-applications'
 author: andrew
 ---
 
