@@ -8,6 +8,21 @@
     
       
       <item>
+        <title>Making Pretty Plots</title>
+        
+          <description>&lt;p&gt;One of the most common reasons for using Python for data analysis is the easy access to good-looking plots, via &lt;code class=&quot;highlighter-rouge&quot;&gt;matplotlib&lt;/code&gt;. I have used Python for plotting data for many years now, reaching the point that I now &lt;strong&gt;hate&lt;/strong&gt; to see bad-looing plots produced by &lt;a href=&quot;https://datanitro.com/blog/better_excel_charts&quot;&gt;Microsoft Excel&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sat, 26 May 2018 00:00:00 +0100</pubDate>
+        <link>
+        /making-pretty-graphs</link>
+        <guid isPermaLink="true">/making-pretty-graphs</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Errors and Debugging</title>
         
           <description>&lt;p&gt;While teaching Python for data analysis in the first- and second-year computational labs in Bath, one of the most common questions I receive from students can be answered with this simple response:&lt;/p&gt;

@@ -19,4 +19,4 @@ On the surface this notebook simply exemplfies the use of the <code>np.argmax</c
 
 Check out the Blackbody Radiation notebook below.
 
-[Run the notebook](https://mybinder.org/v2/gh/bjmorgan/python_in_chemistry/master?filepath=General%2FBlackbody%20radiation%20maximum%20values.ipynb)
+[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/bjmorgan/python_in_chemistry/master?filepath=General%2FBlackbody%20radiation%20maximum%20values.ipynb)

@@ -22,4 +22,4 @@ To reduce the change of introducing errors, there are two easy techniques you ca
 
 These techniques are illustrated in the notebook below, which shows how to use the <code>scipy.constants</code> database to work more conveniently with physical constants and unit conversions. 
 
-[Run the notebook](https://mybinder.org/v2/gh/bjmorgan/python_in_chemistry/master?filepath=General/Working%20with%20units%20and%20physical%20constants.ipynb)
+[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/bjmorgan/python_in_chemistry/master?filepath=General/Working%20with%20units%20and%20physical%20constants.ipynb)

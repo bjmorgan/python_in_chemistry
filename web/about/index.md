@@ -12,7 +12,7 @@ The python_in_chemistry pages are a series of resources for students and educato
 
 This site will introduce a range of resources, covering how to get started with Python and how to make use of Jupyter notebooks. While allowing students to consolidate chemistry knowledge learnt in lectures and tutorials. 
 
-If this is the first time you have tried Python, we recommend starting with the [Basics](/tag/basics/) resources. 
+If this is the first time you have tried Python, we recommend starting with the [Basics](/tag/basics/) resources, in particular a great first introduction can be found in the [Getting Started](/getting-started) resources. 
 
 This open-source project is run from the University of Bath by: 
 

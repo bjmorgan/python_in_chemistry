@@ -37,4 +37,4 @@ The ```def``` tells the computer that you are wanting to **define** a function, 
 
 The use of **functions** is an important paradigm in programming -- the following Jupyter notebook gives some examples of functions and how they can be used. 
 
-[Run the notebook](https://mybinder.org/v2/gh/bjmorgan/python_in_chemistry/master?filepath=General%2FFunctions.ipynb)
+[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/bjmorgan/python_in_chemistry/master?filepath=General%2FFunctions.ipynb)

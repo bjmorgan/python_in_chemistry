@@ -106,7 +106,7 @@
 
 <p>These techniques are illustrated in the notebook below, which shows how to use the <code>scipy.constants</code> database to work more conveniently with physical constants and unit conversions.</p>
 
-<p><a href="https://mybinder.org/v2/gh/bjmorgan/python_in_chemistry/master?filepath=General/Working%20with%20units%20and%20physical%20constants.ipynb">Run the notebook</a></p>
+<p><a href="https://mybinder.org/v2/gh/bjmorgan/python_in_chemistry/master?filepath=General/Working%20with%20units%20and%20physical%20constants.ipynb"><img src="https://mybinder.org/badge.svg" alt="Binder" /></a></p>
 
 	  ]]></description>
 	</item>

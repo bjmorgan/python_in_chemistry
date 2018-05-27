@@ -1,4 +1,5 @@
 matplotlib
+seaborn
 numpy
 scipy
 mendeleev
