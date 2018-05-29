@@ -113,21 +113,6 @@
     
       
       <item>
-        <title>Getting Started</title>
-        
-          <description>&lt;p&gt;The best way to get started with python_in_chemistry is by working through the Data Analysis with Jupyter Notebooks series of notebooks. These will work through:&lt;/p&gt;
-
-</description>
-        
-        <pubDate>Sat, 16 Dec 2017 00:00:00 +0000</pubDate>
-        <link>
-        /getting-started</link>
-        <guid isPermaLink="true">/getting-started</guid>
-      </item>
-      
-    
-      
-      <item>
         <title>Functions</title>
         
           <description>&lt;p&gt;Functions are a fundamental aspect of many programming languages. They allow a programmer to both simplify their code by hiding away many lines of code into a single line, while reducing the amount of work a programmer needs to do, if they need to do the same thing many times.&lt;/p&gt;
