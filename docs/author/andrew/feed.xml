@@ -40,6 +40,111 @@
    <atom:link href="rss" rel="self" type="application/rss+xml" />
    
 	<item>
+	  <title>Import Anything</title>
+	  <link>/import-anything</link>
+		
+				
+						<author>Andrew McCluskey</author>
+				
+		
+				
+		
+				
+		
+	  <pubDate>2018-05-30T00:00:00+01:00</pubDate>
+	  <guid>/import-anything</guid>
+	  <description><![CDATA[
+	     <p>One of the most common reasons for using Python over other languages, like <a href="https://en.wikipedia.org/wiki/C_(programming_language)">C</a> or <a href="https://en.wikipedia.org/wiki/Fortran">Fortran</a> is the <strong>huge</strong> number of packages (or libraries or modules) that are available (see my favourite <a href="https://xkcd.com">xkcd</a> comic to send people as the start to use Python below). It is quite likely that you have made use of Python packages before and perhaps not even realised. This post will show how to install a package, and the different ways to make use of them.</p>
+
+<p><a href="https://xkcd.com/353/"><img src="https://imgs.xkcd.com/comics/python.png" width="60%" /></a>
+Credit: <a href="https://xkcd.com">xkcd</a></p>
+
+<p>A Python package is yet another way for programmers to be <strong>lazy</strong>. For example, instead of writing a specific function to calculate the square-root of a series of numbers in an array, it is a lot <strong>easier</strong> (and faster) to use someone else’s work, in this case the <code class="highlighter-rouge">sqrt</code> function from the <code class="highlighter-rouge">numpy</code> package. Futhermore, the number of packages that exist for Python is huge, with 140403 (at the time of writing) packages available for download from <a href="https://pypi.org">pypi</a> (a popular Python package manager).</p>
+
+<h4 id="how-to-get-packages">How to get packages</h4>
+
+<p>If you have followed the guide to <a href="/running-jupyter-locally">run Jupyter locally</a>, this means that you will have installed the Anaconda software. This comes with a large number of packages, such as <code class="highlighter-rouge">numpy</code>, <code class="highlighter-rouge">scipy</code>, and <code class="highlighter-rouge">matplotlib</code>. However, it does not include <strong>all</strong> packages that you might want to use. For example, in the <a href="/making-pretty-plots">Making Pretty Plots</a> post we make use of the <code class="highlighter-rouge">seaborn</code> package, which does not come with Anaconda and must be installed.</p>
+
+<p>This means that it is necessary to <strong>install</strong> the package. There are many ways to install packages, however many are available on the pypi package manager which makes installation <em>very easy</em>. However, as with many things, the method for interacting with the package manager changes slightly depending on the operating system:</p>
+
+<ul>
+  <li><strong>On Windows</strong>: It is necessary to launch the <code class="highlighter-rouge">Anaconda Prompt</code>, the quickest way to find this is to search in the Start Menu for “Anaconda Prompt”. Launching this should open a window similar to that in the image below.</li>
+  <li><strong>On macOS or Linux</strong>: It is possibly to interact with the package manager via the terminal. This can be launched by searching for “Terminal” in the Spotlight search bar (macOS) or the appropriate search functionality on linux.</li>
+</ul>
+
+<p>The command to install any package that is available on the pypi package manager is:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pip</span> <span class="n">install</span> <span class="n">package</span><span class="o">-</span><span class="n">you</span><span class="o">-</span><span class="n">want</span><span class="o">-</span><span class="n">to</span><span class="o">-</span><span class="n">install</span>
+</code></pre></div></div>
+
+<p>So for installing <code class="highlighter-rouge">seaborn</code> on Windows or macOS/Linux can be seen below.</p>
+
+<p><img src="/assets/images/import001.png" width="80%" />
+Credit: Thanks Megan Stalker for the Windows image.</p>
+
+<p>Runnning such a command will install the contents of the appropriate package in your Python interperator, allowing you to use it in your code. More information about the pypi package manager can be found <a href="https://pypi.org/">here</a>.</p>
+
+<h4 id="using-packages">Using packages</h4>
+
+<p>In order to make use of a <strong>particular function</strong> within a package we must ask the Python interperator to <code class="highlighter-rouge">import</code> it. There are two possible ways to do this:</p>
+
+<ol>
+  <li>We can <code class="highlighter-rouge">import</code> the entire package and then make use of any function within,</li>
+  <li>We can <code class="highlighter-rouge">import</code> specific functions from within a function.</li>
+</ol>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># importing the entire numpy package and giving it the alias np</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span> 
+<span class="c"># using the numpy square-root function on an array </span>
+<span class="n">a</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+
+<span class="c"># importing only the square-root function from the numpy package</span>
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">sqrt</span>
+<span class="c"># using the numpy square-root function on an array </span>
+<span class="n">a</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Notice that in the first example in order to leverage <code class="highlighter-rouge">numpy</code>’s square-root function, it was necessary to tell the Python interperator that you wanted it to use the <code class="highlighter-rouge">numpy</code> package with <code class="highlighter-rouge">np.</code>.</p>
+
+<p>It should be noted here that, personally, I consider <strong>best practice</strong> to be the first example, as the latter could create some confusion in the following example:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">sqrt</span>
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sqrt</span>
+<span class="n">a</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>This code will give the following error:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">---------------------------------------------------------------------------</span>
+<span class="nb">TypeError</span>                                 <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">51</span><span class="o">-</span><span class="mo">010</span><span class="n">dd619ec5a</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span><span class="p">()</span>
+      <span class="mi">2</span> <span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sqrt</span>
+      <span class="mi">3</span> <span class="n">a</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="o">----&gt;</span> <span class="mi">4</span> <span class="n">b</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+
+<span class="nb">TypeError</span><span class="p">:</span> <span class="n">must</span> <span class="n">be</span> <span class="n">real</span> <span class="n">number</span><span class="p">,</span> <span class="ow">not</span> <span class="nb">range</span>
+</code></pre></div></div>
+
+<p>This is because the square-root function from the <code class="highlighter-rouge">math</code> package cannot be used on a series (array or list) of numbers, and by importing it <strong>after</strong> the <code class="highlighter-rouge">numpy</code> version, overwrites the <code class="highlighter-rouge">numpy</code> verison.</p>
+
+<p>Hopefully, this has been a useful, and straightforward, introduction to the purpose and application of packages to <strong>extend</strong> the capabilities of the Python programming language.</p>
+
+<h4 id="appendix">Appendix</h4>
+
+<p>Just as a note, you may see the following syntax in import statements.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="o">*</span>
+</code></pre></div></div>
+
+<p>This says import all of the functions from the package <code class="highlighter-rouge">numpy</code>. This means that all of the functions within the <code class="highlighter-rouge">numpy</code> package can be accessed without needing to use the <code class="highlighter-rouge">np.</code> or <code class="highlighter-rouge">numpy.</code> syntax. Again, this may lead to unexpected results as seen in the previous example.</p>
+
+	  ]]></description>
+	</item>
+
+	<item>
 	  <title>Making Pretty Plots</title>
 	  <link>/making-pretty-graphs</link>
 		
