@@ -8,13 +8,28 @@
     
       
       <item>
+        <title>Python &gt; Excel</title>
+        
+          <description>&lt;p&gt;A friend runs a blog which discusses the use of small-angle scattering (which is also a major area of work for myself. However, today he posted a blog discussing the &lt;a href=&quot;http://www.lookingatnothing.com/index.php/archives/2645&quot;&gt;minimum concentration of an analyte required to get a good small angle scattering profile&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 05 Jun 2018 00:00:00 +0100</pubDate>
+        <link>
+        /saxs-detection-limits</link>
+        <guid isPermaLink="true">/saxs-detection-limits</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Import Anything</title>
         
           <description>&lt;p&gt;One of the most common reasons for using Python over other languages, like &lt;a href=&quot;https://en.wikipedia.org/wiki/C_(programming_language)&quot;&gt;C&lt;/a&gt; or &lt;a href=&quot;https://en.wikipedia.org/wiki/Fortran&quot;&gt;Fortran&lt;/a&gt; is the &lt;strong&gt;huge&lt;/strong&gt; number of packages (or libraries or modules) that are available (see my favourite &lt;a href=&quot;https://xkcd.com&quot;&gt;xkcd&lt;/a&gt; comic to send people as the start to use Python below). It is quite likely that you have made use of Python packages before and perhaps not even realised. This post will show how to install a package, and the different ways to make use of them.&lt;/p&gt;
 
 </description>
         
-        <pubDate>Wed, 30 May 2018 00:00:00 +0100</pubDate>
+        <pubDate>Mon, 04 Jun 2018 00:00:00 +0100</pubDate>
         <link>
         /import-anything</link>
         <guid isPermaLink="true">/import-anything</guid>

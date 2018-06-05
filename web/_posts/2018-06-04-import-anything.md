@@ -4,7 +4,7 @@ current: post
 #cover:  assets/images/welcome.jpg
 navigation: True
 title: Import Anything 
-date: 2018-05-30
+date: 2018-06-04
 tags: [Basics]
 class: post-template
 subclass: 'post tag-basics'
