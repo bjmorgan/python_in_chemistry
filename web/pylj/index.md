@@ -16,7 +16,7 @@ pylj is an open-source library to facilitate student interaction with classical 
 
 ### what does pylj offer?
 
-Currently pylj will perform the simulation of a 2D argon system by molecular dynamics, with both NVE and NVT ensembles available and making use of a Velocity-Verlet integrator. A series of sampling classes exist (found in the sample module), such as the Interactions and Scattering classes. However, it is straightforward to build a custom sampling class either from scratch or using the sampling class building tools.
+Currently pylj will perform the simulation of a 2D argon system by molecular dynamics, with both NVE and NVT ensembles available and making use of a Velocity-Verlet integrator, as well as Metropolis Monte-Carlo simulations. A series of sampling classes exist (found in the sample module), such as the Interactions (MD), Scattering (MD), and Energy (MC) classes. However, it is straightforward to build a custom sampling class either from scratch or using the sampling class building tools.
 
 ### example exercises
 
@@ -24,11 +24,11 @@ We are currently in the process of developing example laboratory exercises that 
 
 ### how to get pylj?
 
-If you are interested in using pylj, in any sense, fork the code at [github.com/arm61/pylj](http://www.github.com/arm61/pylj) or email Andrew (arm61 ‘at’ bath.ac.uk). We are currently investigating the feasibility of hosting a freely available test instance on Amazon Web Services. Full API level documentation is available at [pylj.rtfd.io](http://pylj.rtfd.io).
+If you are interested in using pylj, in any sense, fork the code at [github.com/arm61/pylj](http://www.github.com/arm61/pylj) or email Andrew (arm61 ‘at’ bath.ac.uk). pylj is currently available as an interactive web resource at the following [link](http://pythoninchemistry.org/pylj/hpc), there is a password required but [Andrew](mailto:arm61@bath.ac.uk) will happily supply this if you drop him an email. Full API level documentation is available at [pylj.rtfd.io](http://pylj.rtfd.io).
 
 ### requirements
 
-To run pylj locally we recommend installing the [anaconda](http://pythoninchemistry.org/running-jupyter-locally), which gives access to Jupyter notebook framework and the necessary packages. It is also it is necessary to have a C++ compiler, most macOS or Linux machines should already have this, on Windows it is best to install the [Visual C++ package](https://www.microsoft.com/en-gb/download/details.aspx?id=48145). 
+To run pylj locally we recommend installing the [Anaconda](http://pythoninchemistry.org/running-jupyter-locally), which gives access to Jupyter notebook framework and the necessary packages. It is also it is necessary to have a C++ compiler, most macOS or Linux machines should already have this, on Windows it is best to install the [Visual C++ package](https://www.microsoft.com/en-gb/download/details.aspx?id=48145). 
 
 ### how to cite pylj 
 
