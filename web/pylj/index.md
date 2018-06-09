@@ -20,7 +20,7 @@ Currently pylj can perform the simulation of a 2D argon system by molecular dyna
 
 ### examples
 
-Examples of the [Monte-Carlo](http://35.230.133.1/notebook/notebooks/examples/monte_carlo.ipynb) and [molecular dynamics](http://35.230.133.1/notebook/notebooks/examples/molecular_dynamics.ipynb) interfaces can be found at the following links (the password is the name of the software). 
+Examples of the [Monte-Carlo](http://35.230.133.1/notebook/notebooks/examples/monte_carlo.ipynb) and [molecular dynamics](http://35.230.133.1/notebook/notebooks/examples/molecular_dynamics.ipynb) interfaces can be found at the following links (the password is the name of the software). *Currently the cloud resource being accessed for this is small so wait times my be long*.  
 
 We are currently in the process of developing example laboratory exercises that make use of pylj. These will include a study of ideal and non-ideal gas conditions and the effect of the phase transitions on the radial distribution function, scattering profiles and mean squared deviation. 
 
