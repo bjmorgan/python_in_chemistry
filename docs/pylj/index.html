@@ -151,19 +151,29 @@ into the {body} of the default.hbs template -->
 
 <h3 id="what-does-pylj-offer">what does pylj offer?</h3>
 
-<p>Currently pylj will perform the simulation of a 2D argon system by molecular dynamics, with both NVE and NVT ensembles available and making use of a Velocity-Verlet integrator, as well as Metropolis Monte-Carlo simulations. A series of sampling classes exist (found in the sample module), such as the Interactions (MD), Scattering (MD), and Energy (MC) classes. However, it is straightforward to build a custom sampling class either from scratch or using the sampling class building tools.</p>
+<p>Currently pylj can perform the simulation of a 2D argon system by molecular dynamics, with both NVE and NVT ensembles available and making use of a Velocity-Verlet integrator, as well as Metropolis Monte-Carlo simulations. A series of sampling classes exist (found in the sample module), such as the Interactions (MD), Scattering (MD), and Energy classes. However, it is straightforward to build a custom sampling class either from scratch or using the sampling class building tools.</p>
 
-<h3 id="example-exercises">example exercises</h3>
+<h3 id="examples">examples</h3>
 
-<p>We are currently in the process of developing example laboratory exercises that make use of pylj. These will include a study of ideal and non-ideal gas conditions and the effect of the phase transitions on the radial distribution function, scattering profiles and mean squared deviation. Currently Andrew’s interactive lecture on molecular dynamics for neutron scattering is available <a href="http://pythoninchemistry.org/introduction-to-md-ntc">here</a>.</p>
+<p>Examples of the <a href="http://35.230.133.1/notebook/notebooks/examples/monte_carlo.ipynb">Monte-Carlo</a> and <a href="http://35.230.133.1/notebook/notebooks/examples/molecular_dynamics.ipynb">molecular dynamics</a> interfaces can be found at the following links (the password is the name of the software).</p>
+
+<p>We are currently in the process of developing example laboratory exercises that make use of pylj. These will include a study of ideal and non-ideal gas conditions and the effect of the phase transitions on the radial distribution function, scattering profiles and mean squared deviation.</p>
 
 <h3 id="how-to-get-pylj">how to get pylj?</h3>
 
-<p>If you are interested in using pylj, in any sense, fork the code at <a href="http://www.github.com/arm61/pylj">github.com/arm61/pylj</a> or email Andrew (arm61 ‘at’ bath.ac.uk). pylj is currently available as an interactive web resource at the following <a href="http://pythoninchemistry.org/pylj/hpc">link</a>, there is a password required but <a href="mailto:arm61@bath.ac.uk">Andrew</a> will happily supply this if you drop him an email. Full API level documentation is available at <a href="http://pylj.rtfd.io">pylj.rtfd.io</a>.</p>
+<p>If you are interested in using pylj, in any sense, fork the code at <a href="http://www.github.com/arm61/pylj">github.com/arm61/pylj</a> or email Andrew (arm61 ‘at’ bath.ac.uk).</p>
+
+<h3 id="is-there-documentation">is there documentation?</h3>
+
+<p>Full API level documentation is available at <a href="http://pylj.rtfd.io">pylj.rtfd.io</a>. We are currently working on a more high level user documentation but looking at the example notebooks above is a great place to start.</p>
 
 <h3 id="requirements">requirements</h3>
 
 <p>To run pylj locally we recommend installing the <a href="http://pythoninchemistry.org/running-jupyter-locally">Anaconda</a>, which gives access to Jupyter notebook framework and the necessary packages. It is also it is necessary to have a C++ compiler, most macOS or Linux machines should already have this, on Windows it is best to install the <a href="https://www.microsoft.com/en-gb/download/details.aspx?id=48145">Visual C++ package</a>.</p>
+
+<h3 id="contributing-and-feature-requests">contributing and feature requests</h3>
+
+<p>Information about contributing can be found <a href="https://github.com/arm61/pylj/blob/master/CONTRIBUTING.md">here</a>, there is also a <a href="https://pylj.slack.com">Slack channel</a> to discuss ideas and to communicate with developers.</p>
 
 <h3 id="how-to-cite-pylj">how to cite pylj</h3>
 
