@@ -9,6 +9,7 @@ tags: [Applications]
 class: post-template
 subclass: 'post tag-basics'
 author: andrew
+published: false
 ---
 
 One of my most commonly used [libraries](/import-anything) to use in Python is [Scipy](https://scipy.org/scipylib/index.html), 
