@@ -38,7 +38,7 @@ To run pylj locally we recommend installing the [Anaconda](http://pythoninchemis
 
 ### contributing and feature requests
 
-Information about contributing can be found [here](https://github.com/arm61/pylj/blob/master/CONTRIBUTING.md), there is also a [Slack channel](https://pylj.slack.com) to discuss ideas and to communicate with developers. 
+Information about contributing can be found [here](https://github.com/arm61/pylj/blob/master/CONTRIBUTING.md). 
 
 ### how to cite pylj 
 
