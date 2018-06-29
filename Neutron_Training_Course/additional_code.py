@@ -1,5 +1,6 @@
 import numpy as np 
 import matplotlib.pyplot as plt
+from pylj import md, util, sample, comp
 
 def nonbond_plots():
     fig, ax = plt.subplots(figsize=(10, 7))
@@ -33,3 +34,28 @@ def velocity_plot():
     ax.set_xlabel('v$_i$')
     plt.tight_layout()
     return fig, ax
+
+def periodic_boundary(number_of_steps, temperature):
+    """This is a piece of exemplary code to show a single particle traveling across the periodic boundary.
+
+    Parameters
+    ----------
+    number_of_steps: int
+        Number of step in simulation.
+    temperature: float
+        Temperature of simulation.
+    """
+    number_of_particles = 1
+    sample_freq = 10
+    system = md.initialise(number_of_particles, temperature, 50, 'square')
+    sampling = sample.JustCell(system)
+    system.time = 0
+    for i in range(0, number_of_steps):
+        system.particles, system.distances, system.forces, system.energies = comp.compute_forces(system.particles, system.box_length, system.cut_off)
+        system.particles = md.velocity_verlet(system.particles, system.timestep_length, system.box_length, system.cut_off)
+        system = md.sample(system.particles, system.box_length, system.initial_particles, system)
+        system.particles = comp.heat_bath(system.particles, system.temperature_sample, temperature)
+        system.time += system.timestep_length
+        system.step += 1
+        if system.step % sample_freq == 0:
+            sampling.update(system)
