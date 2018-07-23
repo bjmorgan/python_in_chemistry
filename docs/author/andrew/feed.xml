@@ -54,7 +54,7 @@
 	  <pubDate>2018-06-05T00:00:00+01:00</pubDate>
 	  <guid>/saxs-detection-limits</guid>
 	  <description><![CDATA[
-	     <p>A friend runs a blog which discusses the use of small-angle scattering (which is also a major area of work for myself. However, today he posted a blog discussing the <a href="http://www.lookingatnothing.com/index.php/archives/2645">minimum concentration of an analyte required to get a good small angle scattering profile</a>.</p>
+	     <p>A friend runs a blog which discusses the use of small-angle scattering (which is also a major area of work for myself). However, today he posted a blog discussing the <a href="http://www.lookingatnothing.com/index.php/archives/2645">minimum concentration of an analyte required to get a good small angle scattering profile</a>.</p>
 
 <p>This blog included a Excel spreadsheet detailing how to preform this calculation. And naturally I was immediately keen to show how this could be performed in Python. So linked below is a Jupyter notebook that uses numpy and pandas to reproduce the work of <a href="http://www.lookingatnothing.com">Brian</a>.</p>
 
