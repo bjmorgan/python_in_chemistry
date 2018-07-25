@@ -147,29 +147,29 @@ into the {body} of the default.hbs template -->
 
 <h3 id="what-is-pylj">what is pylj?</h3>
 
-<p>pylj is an open-source library to facilitate student interaction with classical simulation. It is designed to operate within the Jupyter notebook framework, making it easy to implement in the classroom, or computer lab. Additionally, due to the open-source, and documented, nature of the code it is easy for educators to add unique, custom extensions.</p>
+<p>pylj is an open-source Python library to facilitate student interaction with classical atomistic simulation. It is designed to operate within the Jupyter notebook framework, making it easy to implement in the classroom, or computer lab. pylj has been published in the <a href="http://jose.theoj.org/papers/58daa1a1a564dc8e0f99ffcdae20eb1d">Journal of Open-Source Education</a>, this paper is a great place to find out more.</p>
 
 <h3 id="what-does-pylj-offer">what does pylj offer?</h3>
 
-<p>Currently pylj can perform the simulation of a 2D argon system by molecular dynamics, with both NVE and NVT ensembles available and making use of a Velocity-Verlet integrator, as well as Metropolis Monte-Carlo simulations. A series of sampling classes exist (found in the sample module), such as the Interactions (MD), Scattering (MD), and Energy classes. However, it is straightforward to build a custom sampling class either from scratch or using the sampling class building tools.</p>
+<p>Currently pylj can perform the simulation of a 2D argon system by molecular dynamics, with both NVE and NVT ensembles available and making use of a Velocity-Verlet integrator, as well as Metropolis Monte-Carlo simulations. A series of sampling classes exist (found in the sample module), such as the Interactions (MD), Scattering (MD), and Energy classes. However, it is <a href="http://pylj.readthedocs.io/en/latest/visualisation.html">straightforward</a> to build a custom sampling class either from scratch or using the sampling class building tools.</p>
 
 <h3 id="examples">examples</h3>
 
 <p>Examples of the <a href="http://35.230.133.1/notebook/notebooks/examples/monte_carlo.ipynb">Monte-Carlo</a> and <a href="http://35.230.133.1/notebook/notebooks/examples/molecular_dynamics.ipynb">molecular dynamics</a> interfaces can be found at the following links (the password is the name of the software). <em>Currently the cloud resource being accessed for this is small so wait times my be long</em>.</p>
 
-<p>Some examples of possible teaching laboratory exercises that use pylj can be found <a href="https://github.com/arm61/pylj/tree/master/examples">here</a>.</p>
+<p>Some examples of possible teaching laboratory exercises making use of pylj are discussed in the <strong>Usage</strong> section of the <a href="http://jose.theoj.org/papers/58daa1a1a564dc8e0f99ffcdae20eb1d">paper</a></p>
 
 <h3 id="how-to-get-pylj">how to get pylj?</h3>
 
-<p>If you are interested in using pylj, in any sense, fork the code at <a href="http://www.github.com/arm61/pylj">github.com/arm61/pylj</a> or email Andrew (arm61 ‘at’ bath.ac.uk).</p>
+<p>If you are interested in using pylj, in any sense, fork the code at <a href="http://www.github.com/arm61/pylj">github.com/arm61/pylj</a> or install via <code class="highlighter-rouge">pip</code>. If you have any trouble email Andrew (arm61 ‘at’ bath.ac.uk).</p>
 
 <h3 id="is-there-documentation">is there documentation?</h3>
 
-<p>Full API level documentation is available at <a href="http://pylj.rtfd.io">pylj.rtfd.io</a>. We are currently working on a more high level user documentation but looking at the example notebooks above is a great place to start.</p>
+<p>Full API level documentation is available at <a href="http://pylj.rtfd.io">pylj.rtfd.io</a>. For something more high-level, the <a href="http://jose.theoj.org/papers/58daa1a1a564dc8e0f99ffcdae20eb1d">paper</a> is a great place to start.</p>
 
 <h3 id="requirements">requirements</h3>
 
-<p>To run pylj locally we recommend installing the <a href="http://pythoninchemistry.org/running-jupyter-locally">Anaconda</a>, which gives access to Jupyter notebook framework and the necessary packages. It is also it is necessary to have a C++ compiler, most macOS or Linux machines should already have this, on Windows it is best to install the <a href="https://www.microsoft.com/en-gb/download/details.aspx?id=48145">Visual C++ package</a>.</p>
+<p>To run pylj locally we recommend installing the <a href="http://pythoninchemistry.org/running-jupyter-locally">Anaconda</a>, which gives access to Jupyter notebook framework and the necessary packages. It is also it is desirable to have a C++ compiler, most macOS or Linux machines should already have this, on Windows it is best to install the <a href="https://www.microsoft.com/en-gb/download/details.aspx?id=48145">Visual C++ package</a>.</p>
 
 <h3 id="contributing-and-feature-requests">contributing and feature requests</h3>
 
@@ -177,7 +177,7 @@ into the {body} of the default.hbs template -->
 
 <h3 id="how-to-cite-pylj">how to cite pylj</h3>
 
-<p>Thank you for using pylj. If you use this code in a teaching laboratory or a publication we would greatly appreciate if you would cite both the <a href="http://jose.theoj.org/papers/58daa1a1a564dc8e0f99ffcdae20eb1d">JOSE paper</a> and the Zenodo DOI appropriate to your version of pylj (use the function <code class="highlighter-rouge">pylj.util.__cite__()</code> to get the appropriate DOI).</p>
+<p>Thank you for using pylj. If you use this code in a teaching laboratory or a publication we would greatly appreciate if you would cite both the <a href="http://jose.theoj.org/papers/58daa1a1a564dc8e0f99ffcdae20eb1d">JOSE paper</a> and the Zenodo DOI appropriate to your particular version of pylj (use the function <code class="highlighter-rouge">pylj.util.__cite__()</code> to get the appropriate DOI).</p>
 
             </section>
 
