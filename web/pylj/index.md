@@ -12,7 +12,7 @@ subclass: 'post page'
 
 ### what is pylj?
 
-pylj is an open-source library to facilitate student interaction with classical simulation. It is designed to operate within the Jupyter notebook framework, making it easy to implement in the classroom, or computer lab. Additionally, due to the open-source, and documented, nature of the code it is easy for educators to add unique, custom extensions.
+pylj is an open-source library to facilitate student interaction with classical simulation. It is designed to operate within the Jupyter notebook framework, making it easy to implement in the classroom, or computer lab. Additionally, due to the open-source, and documented, nature of the code it is easy for educators to add unique, custom extensions. 
 
 ### what does pylj offer?
 
@@ -42,6 +42,4 @@ Information about contributing can be found [here](https://github.com/arm61/pylj
 
 ### how to cite pylj 
 
-Thank you for using pylj. If you use this code in a teaching laboratory or a publication we would greatly appreciate if you would cite the DOI in the Zenodo link below.
-
-[![DOI](https://zenodo.org/badge/119863480.svg)](https://zenodo.org/badge/latestdoi/119863480)
+Thank you for using pylj. If you use this code in a teaching laboratory or a publication we would greatly appreciate if you would cite both the [JOSE paper](http://jose.theoj.org/papers/58daa1a1a564dc8e0f99ffcdae20eb1d) and the Zenodo DOI appropriate to your version of pylj (use the function `pylj.util.__cite__()` to get the appropriate DOI).
