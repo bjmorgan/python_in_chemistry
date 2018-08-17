@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Document Settings -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Base Meta -->
+    <!-- dynamically fixing the title for tag/author pages -->
+
+
+
+    <title>Making Pretty Plots</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Styles'n'Scripts -->
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.edited.css" />
+    <!-- highlight.js -->
+    <link rel="stylesheet" type="text/css" href="/assets/built/rainbow.css" />
+    <!--<style>.hljs { background: none; }</style>-->
+
+    <!-- This tag outputs SEO meta+structured data and other important settings -->
+    <meta name="description" content="introducing Python to chemistry students" />
+    <link rel="shortcut icon" href="http://localhost:4000/assets/images/pic.png" type="image/png" />
+    <link rel="canonical" href="http://localhost:4000/making-pretty-graphs" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+
+     <!--title below is coming from _includes/dynamic_title-->
+    <meta property="og:site_name" content="python_in_chemistry" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Making Pretty Plots" />
+    <meta property="og:description" content="One of the most common reasons for using Python for data analysis is the easy access to good-looking plots, via matplotlib. I have used Python for plotting data for many years now, reaching the point that I now hate to see bad-looing plots produced by Microsoft Excel. In this post" />
+    <meta property="og:url" content="http://localhost:4000/making-pretty-graphs" />
+    <meta property="og:image" content="http://localhost:4000/" />
+    <meta property="article:publisher" content="https://www.facebook.com/" />
+    <meta property="article:author" content="https://www.facebook.com/" />
+    <meta property="article:published_time" content="2018-05-26T00:00:00+01:00" />
+    <meta property="article:modified_time" content="2018-05-26T00:00:00+01:00" />
+    <meta property="article:tag" content="Basics" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Making Pretty Plots" />
+    <meta name="twitter:description" content="One of the most common reasons for using Python for data analysis is the easy access to good-looking plots, via matplotlib. I have used Python for plotting data for many years now, reaching the point that I now hate to see bad-looing plots produced by Microsoft Excel. In this post" />
+    <meta name="twitter:url" content="http://localhost:4000/" />
+    <meta name="twitter:image" content="http://localhost:4000/" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="python_in_chemistry" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="Basics" />
+    <meta name="twitter:site" content="@pychembath" />
+    <meta name="twitter:creator" content="@pychembath" />
+    <meta property="og:image:width" content="1400" />
+    <meta property="og:image:height" content="933" />
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Website",
+    "publisher": {
+        "@type": "Organization",
+        "name": "python_in_chemistry",
+        "logo": "http://localhost:4000/assets/images/pic.png"
+    },
+    "url": "http://localhost:4000/making-pretty-graphs",
+    "image": {
+        "@type": "ImageObject",
+        "url": "http://localhost:4000/",
+        "width": 2000,
+        "height": 666
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://localhost:4000/making-pretty-graphs"
+    },
+    "description": "One of the most common reasons for using Python for data analysis is the easy access to good-looking plots, via matplotlib. I have used Python for plotting data for many years now, reaching the point that I now hate to see bad-looing plots produced by Microsoft Excel. In this post"
+}
+    </script>
+
+    <!-- <script type="text/javascript" src="https://demo.ghost.io/public/ghost-sdk.min.js?v=724281a32e"></script>
+    <script type="text/javascript">
+    ghost.init({
+    	clientId: "ghost-frontend",
+    	clientSecret: "f84a07a72b17"
+    });
+    </script> -->
+
+    <meta name="generator" content="Jekyll 3.6.2" />
+    <link rel="alternate" type="application/rss+xml" title="Making Pretty Plots" href="/feed.xml" />
+
+
+</head>
+<body class="post-template">
+
+    <div class="site-wrapper">
+        <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
+        <!-- default -->
+
+<!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template -->
+
+<header class="site-header outer">
+    <div class="inner">
+        <nav class="site-nav">
+    <div class="site-nav-left">
+        
+            
+                <a class="site-nav-logo" href="http://localhost:4000/"><img src="/assets/images/pic.png" alt="python_in_chemistry" /></a>
+            
+        
+        
+            <ul class="nav" role="menu">
+    <li class="nav-about" role="menuitem"><a href="/about/">About</a></li>
+    <li class="nav-getting-started" role="menuitem"><a href="/getting-started">getting started</a></li>
+    <li class="nav-basics" role="menuitem"><a href="/tag/basics/">Basics</a></li>
+    <li class="nav-applications" role="menuitem"><a href="/tag/applications/">Applications</a></li>
+    <li class="nav-pylj" role="menuitem"><a href="/pylj">pylj</a></li>
+</ul>
+
+        
+    </div>
+    <div class="site-nav-right">
+        <div class="social-links">
+            
+            
+                <a class="social-link social-link-tw" href="https://twitter.com/pychembath" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+</a>
+            
+        </div>
+        
+    </div>
+</nav>
+
+    </div>
+</header>
+
+<!-- Everything inside the #post tags pulls data from the post -->
+<!-- #post -->
+
+<main id="site-main" class="site-main outer" role="main">
+    <div class="inner">
+
+        <article class="post-full post tag-basics no-image">
+
+            <header class="post-full-header">
+                <section class="post-full-meta">
+                    <time class="post-full-meta-date" datetime="26 May 2018">26 May 2018</time>
+                    
+                        <span class="date-divider">/</span>
+                        
+                            
+                               <a href='/tag/basics/'>BASICS</a>
+                            
+                        
+                    
+                </section>
+                <h1 class="post-full-title">Making Pretty Plots</h1>
+            </header>
+
+            
+
+            <section class="post-full-content">
+                <div class="kg-card-markdown">
+                    <p>One of the most common reasons for using Python for data analysis is the easy access to good-looking plots, via <code class="highlighter-rouge">matplotlib</code>. I have used Python for plotting data for many years now, reaching the point that I now <strong>hate</strong> to see bad-looing plots produced by <a href="https://datanitro.com/blog/better_excel_charts">Microsoft Excel</a>.</p>
+
+<p>In this post we will look at some packages in Python to help create pretty plots for your posters, papers, and presentations.</p>
+
+<p>For some examplary data, we will plot some data associated with the Arrhenius equation,</p>
+
+<script type="math/tex; mode=display">k = A\exp{\bigg(\frac{-E_a}{k_BT}\bigg)}.</script>
+
+<p>Hopefully you are familiar with the reformulation of this equation such that the data can be plotted as a straight line with gradient <script type="math/tex">-E_a / k_B</script> and intercept <script type="math/tex">\ln{(A)}</script>,</p>
+
+<script type="math/tex; mode=display">\ln{(k)} = \frac{-E_a}{k_B}\frac{1}{T} + \ln{(A)}.</script>
+
+<p>The raw data can be found <a href="ihttps://raw.githubusercontent.com/bjmorgan/python_in_chemistry/master/General/exp1.csv">here</a> for playing along the notebook at home. If you open the file in some text editor you can see that it consists of a <em>comment</em> line that starts with a # symbol, followed by data which is separated into three columns by commas (hence the file’s extension of <code class="highlighter-rouge">.csv</code> [comma separated values]), the file should look something like this:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#this is some example Arrenhius data produced by ARM 
+Temperature,k,dk
+100.0,2.078e-04,2.078e-06
+150.0,2.176e-04,2.176e-06
+200.0,2.229e-04,2.229e-06
+250.0,2.260e-04,2.260e-06
+300.0,2.281e-04,2.281e-06
+350.0,2.316e-04,2.316e-06
+400.0,2.331e-04,2.331e-06
+</code></pre></div></div>
+
+<p>There are many ways to read data in from a file in Python, however we will use the <code class="highlighter-rouge">loadtxt</code> function from the <code class="highlighter-rouge">numpy</code> package to read in and store the data. We can do this using the following command:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="n">t</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">dk</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="s">'exp1.csv'</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s">','</span><span class="p">,</span> <span class="n">unpack</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>The first line here will import the package <code class="highlighter-rouge">numpy</code> and give the alias <code class="highlighter-rouge">np</code> (this is just to save our lazy fingers from writing <code class="highlighter-rouge">numpy</code> everytime we want to use a function from this package). The next line will do the following:</p>
+
+<ul>
+  <li>read in the file called <code class="highlighter-rouge">exp1.csv</code>,</li>
+  <li>skipping the first 2 rows (these are the comment line and the headings), since the columns are separated by commas it is necessary to make the function aware of this (the jargon for the separator is the <strong>delimter</strong>),</li>
+  <li>the normal way for this function to read in data is a a series of rows for which the data are related (rather than the columns we have) so we must tell the function to <em>unpack</em> this data (essentially the matrix storing the data is transposed).</li>
+  <li>All of this will store each of the three columns into the variables <code class="highlighter-rouge">t</code>, <code class="highlighter-rouge">k</code>, and <code class="highlighter-rouge">dk</code>. We can then have a look at one of these by printing the array:</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Which will return:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[ 0.0002078  0.0002176  0.0002229  0.000226   0.0002281  0.0002316
+  0.0002331]
+</code></pre></div></div>
+
+<p>This data is stored as a <a href="https://docs.scipy.org/doc/numpy-1.14.0/reference/generated/numpy.ndarray.html"><code class="highlighter-rouge">numpy.ndarray</code></a>, which is an information dense and efficient way to store homogeneous data. The most important aspect of us is that it is very-compatible with <code class="highlighter-rouge">numpy</code> functions.</p>
+
+<p>Now that the data has been read in, we can start to plot it. In Python plotting data quickly can be very simple. To plot the reciprocal temperature against the natural logarithm of the rate constant, we can do the following:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">t</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">k</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>The <code class="highlighter-rouge">tight_layout()</code> function simply ensures that the when the file is presented all the formatting of the image is correct. This will print the following image:</p>
+
+<p><img src="/assets/images/mpp001.png" alt="Better than excel" /></p>
+
+<p>Alright, so this looks okay-ish, but isn’t really representing our data well (a line between our descrete points), we have failed to label our axes, and there are no error bars, lets try expanding what we have:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">t</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">k</span><span class="p">),</span> <span class="n">yerr</span><span class="o">=</span><span class="n">dk</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s">'o'</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s">''</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">'1/T (K$^{-1}$)'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">'ln(k)'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>We can already see an improvement in this image:</p>
+
+<p><img src="/assets/images/mpp002.png" alt="This is passable" /></p>
+
+<p><code class="highlighter-rouge">matplotlib</code> is a hugely flexible package, that offers the user a massive amount of control about how the plot is presented. Many of the aesthetic control over the plot can be accessed by affecting the <code class="highlighter-rouge">rcParams</code> (this is a dictionary object used by <code class="highlighter-rouge">matplotlib</code>). For example,  if you wanted a grid on your plot, a green background, massive x-axis labels and the y-axis ticks pointing into the graph, the following could be used:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="n">mpl</span>
+<span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s">'axes.grid'</span><span class="p">]</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s">'ytick.direction'</span><span class="p">]</span> <span class="o">=</span> <span class="s">'in'</span>
+<span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s">'xtick.labelsize'</span><span class="p">]</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s">'axes.facecolor'</span><span class="p">]</span> <span class="o">=</span> <span class="s">'g'</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">t</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">k</span><span class="p">),</span> <span class="n">yerr</span><span class="o">=</span><span class="n">dk</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s">'^'</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s">''</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s">'#34a5daff'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">'1/T (K$^{-1}$)'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">'ln(k)'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>This will give a monstrosity which looks like this:</p>
+
+<p><img src="/assets/images/mpp003.png" alt="My eyes! My beautiful eyes!" /></p>
+
+<p>You will also notice that the marker in this has been changed to a triangle by using <code class="highlighter-rouge">'^'</code> instead of <code class="highlighter-rouge">'o'</code> and the color of the data points is now defined by a hex RGB code. The whole range of <code class="highlighter-rouge">rcParams</code> that can be varied can be found by using the following command:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>These can be varied to your heart’s content until you find a particular plot design that you love. However, programmers are lazy and if you can’t be bothered spending hours adjusting your plot in every way you can use the <code class="highlighter-rouge">seaborn</code> package. This package is in many ways a layer on top of matplotlib that allows some really <a href="https://seaborn.pydata.org/examples/index.html">fancy plots</a> to be created. However, I am a big fan of it for two simple reasons:</p>
+
+<ol>
+  <li>Nicer standard colors; with native colourblind support,</li>
+  <li>Quick assignment of a plot context to control font sizes.</li>
+</ol>
+
+<p>Both of these aspects are assigned in the <code class="highlighter-rouge">set()</code> function. So to plot the data above making use of the <code class="highlighter-rouge">seaborn</code> package we run the following:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="n">sns</span>
+<span class="n">sns</span><span class="o">.</span><span class="nb">set</span><span class="p">(</span><span class="s">'talk'</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s">'colorblind'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">t</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">k</span><span class="p">),</span> <span class="n">yerr</span><span class="o">=</span><span class="n">dk</span><span class="o">/</span><span class="n">k</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s">'o'</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s">''</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">'1/T (K$^{-1}$)'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">'ln(k)'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>Which produces the following:</p>
+
+<p><img src="/assets/images/mpp004.png" alt="*Hearts-for-eyes-emoji*" /></p>
+
+<p>As you can see the plot context here is set to <code class="highlighter-rouge">'talk'</code>, <code class="highlighter-rouge">seaborn</code> has four possible contexts:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">'paper'</code></li>
+  <li><code class="highlighter-rouge">'notebook'</code></li>
+  <li><code class="highlighter-rouge">'talk'</code></li>
+  <li><code class="highlighter-rouge">'poster'</code></li>
+</ul>
+
+<p>Which will gradually increase the size of the elements in the plot to make them more easily read. The other keyword in the <code class="highlighter-rouge">set()</code> function is <code class="highlighter-rouge">palette</code>, <code class="highlighter-rouge">seaborn</code> allows a wide variety of palettes however, as a colourblind person my favourite is the <code class="highlighter-rouge">'colorblind'</code> (note the American spelling) option. The colours in this palette are specifically chosen to give good differentiation for those suffering from colourblindness. An example of the colours can be seen here, where the plots are offest by 0.1 in the y-axis:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="n">sns</span>
+<span class="n">sns</span><span class="o">.</span><span class="nb">set</span><span class="p">(</span><span class="s">'talk'</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s">'colorblind'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">t</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">k</span><span class="p">),</span> <span class="n">yerr</span><span class="o">=</span><span class="n">dk</span><span class="o">/</span><span class="n">k</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s">'o'</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s">''</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">t</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">+</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">yerr</span><span class="o">=</span><span class="n">dk</span><span class="o">/</span><span class="n">k</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s">'o'</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s">''</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">t</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">+</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">yerr</span><span class="o">=</span><span class="n">dk</span><span class="o">/</span><span class="n">k</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s">'o'</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s">''</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">t</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">+</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">yerr</span><span class="o">=</span><span class="n">dk</span><span class="o">/</span><span class="n">k</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s">'o'</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s">''</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">'1/T (K$^{-1}$)'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">'ln(k)'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p><img src="/assets/images/mpp005.png" alt="Quality contrast" /></p>
+
+<p>As with many aspects of Python plotting is massively extensible and customisible. This was just a quick introduction to some aspects of plotting in Python and we will surely have more in the future. Below is a link to the Binder resource to allow you to play along at home.</p>
+
+<p><a href="https://mybinder.org/v2/gh/bjmorgan/python_in_chemistry/master?filepath=General/Making%20Pretty%20Plots.ipynb"><img src="https://mybinder.org/badge.svg" alt="Binder" /></a></p>
+
+                </div>
+            </section>
+
+            <!-- Email subscribe form at the bottom of the page -->
+            
+
+            <footer class="post-full-footer">
+                <!-- Everything inside the #author tags pulls data from the author -->
+                <!-- #author-->
+                
+                    
+                        <section class="author-card">
+                            
+                            <section class="author-card-content">
+                                <h4 class="author-card-name"><a href="/author/andrew">Andrew McCluskey</a></h4>
+                                
+                                    <p>chemistry/programming phd student</p>
+                                
+                            </section>
+                        </section>
+                        <div class="post-full-footer-right">
+                            <a class="author-card-button" href="/author/andrew">Read More</a>
+                        </div>
+                    
+                
+                    
+                
+                    
+                
+                <!-- /author  -->
+            </footer>
+
+            <!-- If you use Disqus comments, just uncomment this block.
+            The only thing you need to change is "test-apkdzgmqhj" - which
+            should be replaced with your own Disqus site-id. -->
+            
+
+        </article>
+
+    </div>
+</main>
+
+<!-- Links to Previous/Next posts -->
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+            
+                
+                
+                
+                
+                    <article class="read-next-card"
+                        
+                            
+                        
+                    >
+                        <header class="read-next-card-header">
+                            <small class="read-next-card-header-sitetitle">&mdash; python_in_chemistry &mdash;</small>
+                            
+                                <h3 class="read-next-card-header-title"><a href="/tag/basics/">Basics</a></h3>
+                            
+                        </header>
+                        <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
+</div>
+                        <div class="read-next-card-content">
+                            <ul>
+                                
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/import-anything">Import Anything</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/errors-and-debugging">Errors and Debugging</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/working-with-physical-constants">Working with Physical Constants and Units</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                            </ul>
+                        </div>
+                        <footer class="read-next-card-footer">
+                            <a href="/tag/basics/">
+                                
+                                    See all 6 posts  →
+                                
+                            </a>
+                        </footer>
+                    </article>
+                
+            
+
+            <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+    <article class="post-card post-template no-image">
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/import-anything">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Basics</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">Import Anything</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    <p>One of the most common reasons for using Python over other languages, like [C](https://en.wikipedia.org/wiki/C_(programming_language)) or [Fortran](https://en.wikipedia.org/wiki/Fortran) is the **huge** number of packages (or libraries or modules) that are available (see my favourite [xkcd](https://xkcd.com)</p>
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <span class="post-card-author">
+                            <a href="/author/andrew/">Andrew McCluskey</a>
+                        </span>
+                    
+                
+                    
+                
+                    
+                
+            </footer>
+        </div>
+    </article>
+
+            
+
+            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+    <article class="post-card post-template no-image">
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/errors-and-debugging">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Basics</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">Errors and Debugging</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    <p>While teaching Python for data analysis in the first- and second-year computational labs in Bath, one of the most common questions I receive from students can be answered with this simple response: “Please</p>
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <span class="post-card-author">
+                            <a href="/author/andrew/">Andrew McCluskey</a>
+                        </span>
+                    
+                
+                    
+                
+                    
+                
+            </footer>
+        </div>
+    </article>
+
+            
+
+        </div>
+    </div>
+</aside>
+
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+<!-- Floating header which appears on-scroll, included from includes/floating-header.hbs -->
+<div class="floating-header">
+    <div class="floating-header-logo">
+        <a href="http://localhost:4000/">
+            
+                <img src="/assets/images/pic.png" alt="python_in_chemistry icon" />
+            
+            <span>python_in_chemistry</span>
+        </a>
+    </div>
+    <span class="floating-header-divider">&mdash;</span>
+    <div class="floating-header-title">Making Pretty Plots</div>
+    <div class="floating-header-share">
+        <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
+</svg>
+</div>
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Making+Pretty+Plots&amp;url=https://myJekyll.github.io/jasper2/making-pretty-graphs"
+            onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+
+        </a>
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://myJekyll.github.io/jasper2/making-pretty-graphs"
+            onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+
+        </a>
+    </div>
+    <progress class="progress" value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+</div>
+
+
+<!-- /post -->
+
+<!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs -->
+
+
+        <!-- Previous/next page links - displayed on every page -->
+        
+
+        <!-- The footer at the very bottom of the screen -->
+        <footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <section class="copyright"><a href="http://localhost:4000/">python_in_chemistry</a> &copy; 2018</section>
+                <nav class="site-footer-nav">
+                    <a href="/">Latest Posts</a>
+                    
+                    <a href="https://twitter.com/pychembath" target="_blank" rel="noopener">Twitter</a>
+                </nav>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- The big email subscribe modal content -->
+    
+
+    <!-- highlight.js -->
+    <script src="/assets/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <!-- jQuery + Fitvids, which makes all video embeds responsive -->
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="https://demo.ghost.io/assets/js/jquery.fitvids.js?v=724281a32e"></script>
+
+
+    <!-- Paginator increased to "infinit" in _config.yml -->
+    <!-- if paginator.posts  -->
+    <!-- <script>
+        var maxPages = parseInt('');
+    </script>
+    <script src="/assets/js/infinitescroll.js"></script> -->
+    <!-- /endif -->
+
+    
+
+
+    <!-- Add Google Analytics  -->
+    <!-- Google Analytics Tracking code -->
+ <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+
+ </script>
+
+
+    <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
+    
+        <script>
+
+// NOTE: Scroll performance is poor in Safari
+// - this appears to be due to the events firing much more slowly in Safari.
+//   Dropping the scroll event and using only a raf loop results in smoother
+//   scrolling but continuous processing even when not scrolling
+$(document).ready(function () {
+    // Start fitVids
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+    // End fitVids
+
+    var progressBar = document.querySelector('progress');
+    var header = document.querySelector('.floating-header');
+    var title = document.querySelector('.post-full-title');
+
+    var lastScrollY = window.scrollY;
+    var lastWindowHeight = window.innerHeight;
+    var lastDocumentHeight = $(document).height();
+    var ticking = false;
+
+    function onScroll() {
+        lastScrollY = window.scrollY;
+        requestTick();
+    }
+
+    function onResize() {
+        lastWindowHeight = window.innerHeight;
+        lastDocumentHeight = $(document).height();
+        requestTick();
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(update);
+        }
+        ticking = true;
+    }
+
+    function update() {
+        var trigger = title.getBoundingClientRect().top + window.scrollY;
+        var triggerOffset = title.offsetHeight + 35;
+        var progressMax = lastDocumentHeight - lastWindowHeight;
+
+        // show/hide floating header
+        if (lastScrollY >= trigger + triggerOffset) {
+            header.classList.add('floating-active');
+        } else {
+            header.classList.remove('floating-active');
+        }
+
+        progressBar.setAttribute('max', progressMax);
+        progressBar.setAttribute('value', lastScrollY);
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', onScroll, {passive: true});
+    window.addEventListener('resize', onResize, false);
+
+    update();
+});
+</script>
+
+    
+
+    <!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag -->
+    <!-- ghost_foot -->
+
+</body>
+</html>

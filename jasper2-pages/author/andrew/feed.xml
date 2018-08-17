@@ -40,6 +40,413 @@
    <atom:link href="rss" rel="self" type="application/rss+xml" />
    
 	<item>
+	  <title>Python > Excel</title>
+	  <link>http://localhost:4000/saxs-detection-limits</link>
+		
+				
+						<author>Andrew McCluskey</author>
+				
+		
+				
+		
+				
+		
+	  <pubDate>2018-06-05T00:00:00+01:00</pubDate>
+	  <guid>http://localhost:4000/saxs-detection-limits</guid>
+	  <description><![CDATA[
+	     <p>A friend runs a blog which discusses the use of small-angle scattering (which is also a major area of work for myself. However, today he posted a blog discussing the <a href="http://www.lookingatnothing.com/index.php/archives/2645">minimum concentration of an analyte required to get a good small angle scattering profile</a>.</p>
+
+<p>This blog included a Excel spreadsheet detailing how to preform this calculation. And naturally I was immediately keen to show how this could be performed in Python. So linked below is a Jupyter notebook that uses numpy and pandas to reproduce the work of <a href="http://www.lookingatnothing.com">Brian</a>.</p>
+
+<p><a href="https://mybinder.org/v2/gh/bjmor    gan/python_in_chemistry/master?filepath=Saxs_Detection_Limits/Saxs_Detection_Limits.ipynb"><img src="https://mybinder.org/badge.svg" alt="Binder" /></a></p>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Import Anything</title>
+	  <link>http://localhost:4000/import-anything</link>
+		
+				
+						<author>Andrew McCluskey</author>
+				
+		
+				
+		
+				
+		
+	  <pubDate>2018-06-04T00:00:00+01:00</pubDate>
+	  <guid>http://localhost:4000/import-anything</guid>
+	  <description><![CDATA[
+	     <p>One of the most common reasons for using Python over other languages, like <a href="https://en.wikipedia.org/wiki/C_(programming_language)">C</a> or <a href="https://en.wikipedia.org/wiki/Fortran">Fortran</a> is the <strong>huge</strong> number of packages (or libraries or modules) that are available (see my favourite <a href="https://xkcd.com">xkcd</a> comic to send people as the start to use Python below). It is quite likely that you have made use of Python packages before and perhaps not even realised. This post will show how to install a package, and the different ways to make use of them.</p>
+
+<p><a href="https://xkcd.com/353/"><img src="https://imgs.xkcd.com/comics/python.png" width="60%" /></a>
+Credit: <a href="https://xkcd.com">xkcd</a></p>
+
+<p>A Python package is yet another way for programmers to be <strong>lazy</strong>. For example, instead of writing a specific function to calculate the square-root of a series of numbers in an array, it is a lot <strong>easier</strong> (and faster) to use someone else’s work, in this case the <code class="highlighter-rouge">sqrt</code> function from the <code class="highlighter-rouge">numpy</code> package. Futhermore, the number of packages that exist for Python is huge, with 140403 (at the time of writing) packages available for download from <a href="https://pypi.org">pypi</a> (a popular Python package manager).</p>
+
+<h4 id="how-to-get-packages">How to get packages</h4>
+
+<p>If you have followed the guide to <a href="/running-jupyter-locally">run Jupyter locally</a>, this means that you will have installed the Anaconda software. This comes with a large number of packages, such as <code class="highlighter-rouge">numpy</code>, <code class="highlighter-rouge">scipy</code>, and <code class="highlighter-rouge">matplotlib</code>. However, it does not include <strong>all</strong> packages that you might want to use. For example, in the <a href="/making-pretty-plots">Making Pretty Plots</a> post we make use of the <code class="highlighter-rouge">seaborn</code> package, which does not come with Anaconda and must be installed.</p>
+
+<p>This means that it is necessary to <strong>install</strong> the package. There are many ways to install packages, however many are available on the pypi package manager which makes installation <em>very easy</em>. However, as with many things, the method for interacting with the package manager changes slightly depending on the operating system:</p>
+
+<ul>
+  <li><strong>On Windows</strong>: It is necessary to launch the <code class="highlighter-rouge">Anaconda Prompt</code>, the quickest way to find this is to search in the Start Menu for “Anaconda Prompt”. Launching this should open a window similar to that in the image below.</li>
+  <li><strong>On macOS or Linux</strong>: It is possibly to interact with the package manager via the terminal. This can be launched by searching for “Terminal” in the Spotlight search bar (macOS) or the appropriate search functionality on linux.</li>
+</ul>
+
+<p>The command to install any package that is available on the pypi package manager is:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pip</span> <span class="n">install</span> <span class="n">package</span><span class="o">-</span><span class="n">you</span><span class="o">-</span><span class="n">want</span><span class="o">-</span><span class="n">to</span><span class="o">-</span><span class="n">install</span>
+</code></pre></div></div>
+
+<p>So for installing <code class="highlighter-rouge">seaborn</code> on Windows or macOS/Linux can be seen below.</p>
+
+<p><img src="/assets/images/import001.png" width="80%" />
+Credit: Thanks Megan Stalker for the Windows image.</p>
+
+<p>Runnning such a command will install the contents of the appropriate package in your Python interperator, allowing you to use it in your code. More information about the pypi package manager can be found <a href="https://pypi.org/">here</a>.</p>
+
+<h4 id="using-packages">Using packages</h4>
+
+<p>In order to make use of a <strong>particular function</strong> within a package we must ask the Python interperator to <code class="highlighter-rouge">import</code> it. There are two possible ways to do this:</p>
+
+<ol>
+  <li>We can <code class="highlighter-rouge">import</code> the entire package and then make use of any function within,</li>
+  <li>We can <code class="highlighter-rouge">import</code> specific functions from within a function.</li>
+</ol>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># importing the entire numpy package and giving it the alias np</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span> 
+<span class="c"># using the numpy square-root function on an array </span>
+<span class="n">a</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+
+<span class="c"># importing only the square-root function from the numpy package</span>
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">sqrt</span>
+<span class="c"># using the numpy square-root function on an array </span>
+<span class="n">a</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Notice that in the first example in order to leverage <code class="highlighter-rouge">numpy</code>’s square-root function, it was necessary to tell the Python interperator that you wanted it to use the <code class="highlighter-rouge">numpy</code> package with <code class="highlighter-rouge">np.</code>.</p>
+
+<p>It should be noted here that, personally, I consider <strong>best practice</strong> to be the first example, as the latter could create some confusion in the following example:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">sqrt</span>
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sqrt</span>
+<span class="n">a</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>This code will give the following error:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">---------------------------------------------------------------------------</span>
+<span class="nb">TypeError</span>                                 <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">51</span><span class="o">-</span><span class="mo">010</span><span class="n">dd619ec5a</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span><span class="p">()</span>
+      <span class="mi">2</span> <span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sqrt</span>
+      <span class="mi">3</span> <span class="n">a</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="o">----&gt;</span> <span class="mi">4</span> <span class="n">b</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+
+<span class="nb">TypeError</span><span class="p">:</span> <span class="n">must</span> <span class="n">be</span> <span class="n">real</span> <span class="n">number</span><span class="p">,</span> <span class="ow">not</span> <span class="nb">range</span>
+</code></pre></div></div>
+
+<p>This is because the square-root function from the <code class="highlighter-rouge">math</code> package cannot be used on a series (array or list) of numbers, and by importing it <strong>after</strong> the <code class="highlighter-rouge">numpy</code> version, overwrites the <code class="highlighter-rouge">numpy</code> verison.</p>
+
+<p>Hopefully, this has been a useful, and straightforward, introduction to the purpose and application of packages to <strong>extend</strong> the capabilities of the Python programming language.</p>
+
+<h4 id="appendix">Appendix</h4>
+
+<p>Just as a note, you may see the following syntax in import statements.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="o">*</span>
+</code></pre></div></div>
+
+<p>This says import all of the functions from the package <code class="highlighter-rouge">numpy</code>. This means that all of the functions within the <code class="highlighter-rouge">numpy</code> package can be accessed without needing to use the <code class="highlighter-rouge">np.</code> or <code class="highlighter-rouge">numpy.</code> syntax. Again, this may lead to unexpected results as seen in the previous example.</p>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Making Pretty Plots</title>
+	  <link>http://localhost:4000/making-pretty-graphs</link>
+		
+				
+						<author>Andrew McCluskey</author>
+				
+		
+				
+		
+				
+		
+	  <pubDate>2018-05-26T00:00:00+01:00</pubDate>
+	  <guid>http://localhost:4000/making-pretty-graphs</guid>
+	  <description><![CDATA[
+	     <p>One of the most common reasons for using Python for data analysis is the easy access to good-looking plots, via <code class="highlighter-rouge">matplotlib</code>. I have used Python for plotting data for many years now, reaching the point that I now <strong>hate</strong> to see bad-looing plots produced by <a href="https://datanitro.com/blog/better_excel_charts">Microsoft Excel</a>.</p>
+
+<p>In this post we will look at some packages in Python to help create pretty plots for your posters, papers, and presentations.</p>
+
+<p>For some examplary data, we will plot some data associated with the Arrhenius equation,</p>
+
+<script type="math/tex; mode=display">k = A\exp{\bigg(\frac{-E_a}{k_BT}\bigg)}.</script>
+
+<p>Hopefully you are familiar with the reformulation of this equation such that the data can be plotted as a straight line with gradient <script type="math/tex">-E_a / k_B</script> and intercept <script type="math/tex">\ln{(A)}</script>,</p>
+
+<script type="math/tex; mode=display">\ln{(k)} = \frac{-E_a}{k_B}\frac{1}{T} + \ln{(A)}.</script>
+
+<p>The raw data can be found <a href="ihttps://raw.githubusercontent.com/bjmorgan/python_in_chemistry/master/General/exp1.csv">here</a> for playing along the notebook at home. If you open the file in some text editor you can see that it consists of a <em>comment</em> line that starts with a # symbol, followed by data which is separated into three columns by commas (hence the file’s extension of <code class="highlighter-rouge">.csv</code> [comma separated values]), the file should look something like this:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#this is some example Arrenhius data produced by ARM 
+Temperature,k,dk
+100.0,2.078e-04,2.078e-06
+150.0,2.176e-04,2.176e-06
+200.0,2.229e-04,2.229e-06
+250.0,2.260e-04,2.260e-06
+300.0,2.281e-04,2.281e-06
+350.0,2.316e-04,2.316e-06
+400.0,2.331e-04,2.331e-06
+</code></pre></div></div>
+
+<p>There are many ways to read data in from a file in Python, however we will use the <code class="highlighter-rouge">loadtxt</code> function from the <code class="highlighter-rouge">numpy</code> package to read in and store the data. We can do this using the following command:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="n">t</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">dk</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="s">'exp1.csv'</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s">','</span><span class="p">,</span> <span class="n">unpack</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>The first line here will import the package <code class="highlighter-rouge">numpy</code> and give the alias <code class="highlighter-rouge">np</code> (this is just to save our lazy fingers from writing <code class="highlighter-rouge">numpy</code> everytime we want to use a function from this package). The next line will do the following:</p>
+
+<ul>
+  <li>read in the file called <code class="highlighter-rouge">exp1.csv</code>,</li>
+  <li>skipping the first 2 rows (these are the comment line and the headings), since the columns are separated by commas it is necessary to make the function aware of this (the jargon for the separator is the <strong>delimter</strong>),</li>
+  <li>the normal way for this function to read in data is a a series of rows for which the data are related (rather than the columns we have) so we must tell the function to <em>unpack</em> this data (essentially the matrix storing the data is transposed).</li>
+  <li>All of this will store each of the three columns into the variables <code class="highlighter-rouge">t</code>, <code class="highlighter-rouge">k</code>, and <code class="highlighter-rouge">dk</code>. We can then have a look at one of these by printing the array:</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Which will return:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[ 0.0002078  0.0002176  0.0002229  0.000226   0.0002281  0.0002316
+  0.0002331]
+</code></pre></div></div>
+
+<p>This data is stored as a <a href="https://docs.scipy.org/doc/numpy-1.14.0/reference/generated/numpy.ndarray.html"><code class="highlighter-rouge">numpy.ndarray</code></a>, which is an information dense and efficient way to store homogeneous data. The most important aspect of us is that it is very-compatible with <code class="highlighter-rouge">numpy</code> functions.</p>
+
+<p>Now that the data has been read in, we can start to plot it. In Python plotting data quickly can be very simple. To plot the reciprocal temperature against the natural logarithm of the rate constant, we can do the following:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">t</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">k</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>The <code class="highlighter-rouge">tight_layout()</code> function simply ensures that the when the file is presented all the formatting of the image is correct. This will print the following image:</p>
+
+<p><img src="/assets/images/mpp001.png" alt="Better than excel" /></p>
+
+<p>Alright, so this looks okay-ish, but isn’t really representing our data well (a line between our descrete points), we have failed to label our axes, and there are no error bars, lets try expanding what we have:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">t</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">k</span><span class="p">),</span> <span class="n">yerr</span><span class="o">=</span><span class="n">dk</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s">'o'</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s">''</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">'1/T (K$^{-1}$)'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">'ln(k)'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>We can already see an improvement in this image:</p>
+
+<p><img src="/assets/images/mpp002.png" alt="This is passable" /></p>
+
+<p><code class="highlighter-rouge">matplotlib</code> is a hugely flexible package, that offers the user a massive amount of control about how the plot is presented. Many of the aesthetic control over the plot can be accessed by affecting the <code class="highlighter-rouge">rcParams</code> (this is a dictionary object used by <code class="highlighter-rouge">matplotlib</code>). For example,  if you wanted a grid on your plot, a green background, massive x-axis labels and the y-axis ticks pointing into the graph, the following could be used:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="n">mpl</span>
+<span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s">'axes.grid'</span><span class="p">]</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s">'ytick.direction'</span><span class="p">]</span> <span class="o">=</span> <span class="s">'in'</span>
+<span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s">'xtick.labelsize'</span><span class="p">]</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s">'axes.facecolor'</span><span class="p">]</span> <span class="o">=</span> <span class="s">'g'</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">t</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">k</span><span class="p">),</span> <span class="n">yerr</span><span class="o">=</span><span class="n">dk</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s">'^'</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s">''</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s">'#34a5daff'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">'1/T (K$^{-1}$)'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">'ln(k)'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>This will give a monstrosity which looks like this:</p>
+
+<p><img src="/assets/images/mpp003.png" alt="My eyes! My beautiful eyes!" /></p>
+
+<p>You will also notice that the marker in this has been changed to a triangle by using <code class="highlighter-rouge">'^'</code> instead of <code class="highlighter-rouge">'o'</code> and the color of the data points is now defined by a hex RGB code. The whole range of <code class="highlighter-rouge">rcParams</code> that can be varied can be found by using the following command:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>These can be varied to your heart’s content until you find a particular plot design that you love. However, programmers are lazy and if you can’t be bothered spending hours adjusting your plot in every way you can use the <code class="highlighter-rouge">seaborn</code> package. This package is in many ways a layer on top of matplotlib that allows some really <a href="https://seaborn.pydata.org/examples/index.html">fancy plots</a> to be created. However, I am a big fan of it for two simple reasons:</p>
+
+<ol>
+  <li>Nicer standard colors; with native colourblind support,</li>
+  <li>Quick assignment of a plot context to control font sizes.</li>
+</ol>
+
+<p>Both of these aspects are assigned in the <code class="highlighter-rouge">set()</code> function. So to plot the data above making use of the <code class="highlighter-rouge">seaborn</code> package we run the following:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="n">sns</span>
+<span class="n">sns</span><span class="o">.</span><span class="nb">set</span><span class="p">(</span><span class="s">'talk'</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s">'colorblind'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">t</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">k</span><span class="p">),</span> <span class="n">yerr</span><span class="o">=</span><span class="n">dk</span><span class="o">/</span><span class="n">k</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s">'o'</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s">''</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">'1/T (K$^{-1}$)'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">'ln(k)'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>Which produces the following:</p>
+
+<p><img src="/assets/images/mpp004.png" alt="*Hearts-for-eyes-emoji*" /></p>
+
+<p>As you can see the plot context here is set to <code class="highlighter-rouge">'talk'</code>, <code class="highlighter-rouge">seaborn</code> has four possible contexts:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">'paper'</code></li>
+  <li><code class="highlighter-rouge">'notebook'</code></li>
+  <li><code class="highlighter-rouge">'talk'</code></li>
+  <li><code class="highlighter-rouge">'poster'</code></li>
+</ul>
+
+<p>Which will gradually increase the size of the elements in the plot to make them more easily read. The other keyword in the <code class="highlighter-rouge">set()</code> function is <code class="highlighter-rouge">palette</code>, <code class="highlighter-rouge">seaborn</code> allows a wide variety of palettes however, as a colourblind person my favourite is the <code class="highlighter-rouge">'colorblind'</code> (note the American spelling) option. The colours in this palette are specifically chosen to give good differentiation for those suffering from colourblindness. An example of the colours can be seen here, where the plots are offest by 0.1 in the y-axis:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="n">sns</span>
+<span class="n">sns</span><span class="o">.</span><span class="nb">set</span><span class="p">(</span><span class="s">'talk'</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s">'colorblind'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">t</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">k</span><span class="p">),</span> <span class="n">yerr</span><span class="o">=</span><span class="n">dk</span><span class="o">/</span><span class="n">k</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s">'o'</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s">''</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">t</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">+</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">yerr</span><span class="o">=</span><span class="n">dk</span><span class="o">/</span><span class="n">k</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s">'o'</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s">''</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">t</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">+</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">yerr</span><span class="o">=</span><span class="n">dk</span><span class="o">/</span><span class="n">k</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s">'o'</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s">''</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">t</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">+</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">yerr</span><span class="o">=</span><span class="n">dk</span><span class="o">/</span><span class="n">k</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s">'o'</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s">''</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">'1/T (K$^{-1}$)'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">'ln(k)'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p><img src="/assets/images/mpp005.png" alt="Quality contrast" /></p>
+
+<p>As with many aspects of Python plotting is massively extensible and customisible. This was just a quick introduction to some aspects of plotting in Python and we will surely have more in the future. Below is a link to the Binder resource to allow you to play along at home.</p>
+
+<p><a href="https://mybinder.org/v2/gh/bjmorgan/python_in_chemistry/master?filepath=General/Making%20Pretty%20Plots.ipynb"><img src="https://mybinder.org/badge.svg" alt="Binder" /></a></p>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Errors and Debugging</title>
+	  <link>http://localhost:4000/errors-and-debugging</link>
+		
+				
+						<author>Andrew McCluskey</author>
+				
+		
+				
+		
+				
+		
+	  <pubDate>2018-05-24T00:00:00+01:00</pubDate>
+	  <guid>http://localhost:4000/errors-and-debugging</guid>
+	  <description><![CDATA[
+	     <p>While teaching Python for data analysis in the first- and second-year computational labs in Bath, one of the most common questions I receive from students can be answered with this simple response:</p>
+
+<blockquote>
+  <p>“Please scroll to the bottom of that block of text and read the last bit”</p>
+</blockquote>
+
+<p>Those that have worked with Python before will <em>hopefully</em> know that I am talking about error tracebacks.</p>
+
+<p><strong>Error traceback</strong> is the name for the print out appears when some error is found in the Python code, it is called a traceback because it aims to help you <em>trace back</em> to where the bug is. An example of a simple error traceback can be seen by running the following in a Python interpreter:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">numy</span> <span class="k">as</span> <span class="n">np</span>
+</code></pre></div></div>
+
+<p>Here we are trying to import the numpy module, but have spelt numpy wrong. This code will return something which looks like this:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">---------------------------------------------------------------------------</span>
+<span class="n">ModuleNotFoundError</span>                       <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="mi">73</span><span class="n">b7917897b3</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span><span class="p">()</span>
+<span class="o">----&gt;</span> <span class="mi">1</span> <span class="kn">import</span> <span class="nn">numy</span> <span class="k">as</span> <span class="n">np</span>
+
+<span class="n">ModuleNotFoundError</span><span class="p">:</span> <span class="n">No</span> <span class="n">module</span> <span class="n">named</span> <span class="s">'numy'</span>
+</code></pre></div></div>
+
+<p>Now, at first glance this can appear quite scary. However, just remember that the most important line in an error traceback is the <strong>last one</strong>, for this particular example we have:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ModuleNotFoundError</span><span class="p">:</span> <span class="n">No</span> <span class="n">module</span> <span class="n">named</span> <span class="s">'numy'</span>
+</code></pre></div></div>
+
+<p>This line alone should tell you what the problem in your code is…<strong>should</strong>. Although, remember though that these error traceback messages are written by other humans who originally wrote the code you are using, so the error message may not be perfectly clear. That said, in the above example just by reading the final line of the error traceback we will be able to quickly see that we’ve spelt numpy wrong.</p>
+
+<p>Of course, not all problems can be solved by just reading the last line. The code below shows two possible attempts at using the <code class="highlighter-rouge">np.append()</code> function (which should add a number to the end of an array). Here we are trying to add the next two numbers in the Fibonacci sequence to the existing array:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">])</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="p">[</span><span class="mi">11</span><span class="p">,</span> <span class="mi">19</span><span class="p">])</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">19</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Running this code gives the following error:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">---------------------------------------------------------------------------</span>
+<span class="n">AxisError</span>                                 <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">31</span><span class="o">-</span><span class="mi">198</span><span class="n">b73a8c7ca</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span><span class="p">()</span>
+      <span class="mi">2</span> 
+      <span class="mi">3</span> <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">])</span>
+      <span class="mi">4</span> <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="p">[</span><span class="mi">11</span><span class="p">,</span> <span class="mi">19</span><span class="p">])</span>
+<span class="o">----&gt;</span> <span class="mi">5</span> <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">19</span><span class="p">)</span>
+
+<span class="o">~/</span><span class="n">anaconda3</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">6</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">numpy</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">function_base</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="n">append</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">values</span><span class="p">,</span> <span class="n">axis</span><span class="p">)</span>
+   <span class="mi">5164</span>         <span class="n">values</span> <span class="o">=</span> <span class="n">ravel</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
+   <span class="mi">5165</span>         <span class="n">axis</span> <span class="o">=</span> <span class="n">arr</span><span class="o">.</span><span class="n">ndim</span><span class="o">-</span><span class="mi">1</span>
+<span class="o">-&gt;</span> <span class="mi">5166</span>     <span class="k">return</span> <span class="n">concatenate</span><span class="p">((</span><span class="n">arr</span><span class="p">,</span> <span class="n">values</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="n">axis</span><span class="p">)</span>
+
+<span class="n">AxisError</span><span class="p">:</span> <span class="n">axis</span> <span class="mi">19</span> <span class="ow">is</span> <span class="n">out</span> <span class="n">of</span> <span class="n">bounds</span> <span class="k">for</span> <span class="n">array</span> <span class="n">of</span> <span class="n">dimension</span> <span class="mi">1</span>
+</code></pre></div></div>
+
+<p>Here it is not immediately why the error has arisen. The last line of the traceback seems to be incidating sum issue related to an <code class="highlighter-rouge">axis</code>, which in our ignorance about the <code class="highlighter-rouge">np.append()</code> function, we know nothing about. However, there is another tip to help us solve this problem, which involves the <strong>arrow indicator</strong>:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">----&gt;</span>
+</code></pre></div></div>
+
+<p>This arrow incidates which line the error occured on, and is extremely useful as codes become become larger and more convoluted. In the above example the line indicates that the error has arisen on the line <code class="highlighter-rouge">a = np.append(a, 11, 19)</code>, and following investigation of the <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.append.html"><code class="highlighter-rouge">np.append()</code> documentation</a>, we can discover that the incorrect syntax has been used. The second argument needs to be an array (or list) if both numbers are to be added. The number <code class="highlighter-rouge">19</code> was understood to the be <em>axis</em> argument, for which 19 was not an allowed value. The line above features the correct syntax, hence there was no error found.</p>
+
+<p>This of course is only the tip of the iceberg of error tracebacks and the amount of information available in them. But, hopefully this means people can spend less time waiting for me to help and more time debugging code yourself.</p>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>pylj Launch</title>
+	  <link>http://localhost:4000/pylj-launch</link>
+		
+				
+						<author>Andrew McCluskey</author>
+				
+		
+				
+		
+				
+		
+	  <pubDate>2018-05-18T00:00:00+01:00</pubDate>
+	  <guid>http://localhost:4000/pylj-launch</guid>
+	  <description><![CDATA[
+	     <p><a href="http://pythoninchemistry.org/author/andrew/">Andrew</a> has developed a small teaching utility designed to introduce students to molecular dynamics. He is currently in the process of trying to develop some example applications in the form of laboratory exercises. In the meantime, more information can be found <a href="http://pythoninchemistry.org/pylj">here</a>.</p>
+
+<p>This utility was applied at the ISIS Neutron Training Course as a component of Andrew’s lecture, the material for which can be found in the following post: <a href="http://pythoninchemistry.org/introduction-to-md-ntc">introduction-to-md-ntc</a>.</p>
+
+	  ]]></description>
+	</item>
+
+	<item>
 	  <title>Introduction to Molecular Dynamics for Neutron Scatters</title>
 	  <link>http://localhost:4000/introduction-to-md-ntc</link>
 		
@@ -56,11 +463,22 @@
 	  <description><![CDATA[
 	     <p>This year I was invited to take part in the ISIS Neutron Training Course, a introductory course for neutron scattering scientists. The aim of our session was to introduce molecular dynamics and show how this could be applied to neutron scattering experiments. This involved a workshop showing how <a href="http://people.bath.ac.uk/arm61/falass/">falass</a> could be used to analyse neutron reflectometry and an introdcutory lecture outlining molecular dynamics.</p>
 
-<p>To deliver this lecture, I decided to develop a small python utility (still very alpha in development) that performs simple 2D argon simulations and provides visualisation that is both supported by Jupyter and easily extensible. The attached notebook is the result of this course.</p>
+<p>To deliver this lecture, I decided to develop a small python utility that performs simple 2D argon simulations and provides visualisation that is both supported by Jupyter and easily extensible. The attached notebook is the result of this course.</p>
 
-<p>It should be noted that the pylj (the MD package) is not perfect and possibly will cause the notebook to crash occasionally. Further due to the computationally intensive nature of MD, I recommend downloading the notebook, installing pylj via pip and running the notebook on your machine. Finally, make sure to also download the additional_code.py file as this makes the plotting easier.</p>
+<p>It should be noted that due to the computationally intensive nature of MD, I recommend downloading the notebook, installing pylj via pip and running the notebook on your machine. On Window type the following into the Anaconda Prompt, on macOS or Linux type it into the terminal.</p>
 
-<p><a href="https://github.com/bjmorgan/python_in_chemistry/tree/master/Neutron_training_Course">Download</a></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install pylj
+</code></pre></div></div>
+
+<p>Finally, make sure to also download the additional_code.py file as this makes the plotting easier (make sure that the additional_code.py file is in the same folder as the lecture when you launch the Jupyter notebook).</p>
+
+<p><a href="https://raw.githubusercontent.com/bjmorgan/python_in_chemistry/master/Neutron_Training_Course/lecture.ipynb">Download Lecture</a></p>
+
+<p><a href="https://raw.githubusercontent.com/bjmorgan/python_in_chemistry/master/Neutron_Training_Course/additional_code.py">Download additional_code</a></p>
+
+<p>(Right click and download the files)</p>
+
+<p>There is currently a server running on which the lecture can be worked through. However, a password is needed, please email Andrew to gain access (arm61 ‘at’ bath.ac.uk). Check that out <a href="http://35.230.133.1/notebook/notebooks/NTC/lecture.ipynb">here</a>.</p>
 
 	  ]]></description>
 	</item>
@@ -105,7 +523,7 @@
 
 <p>The use of <strong>functions</strong> is an important paradigm in programming – the following Jupyter notebook gives some examples of functions and how they can be used.</p>
 
-<p><a href="https://mybinder.org/v2/gh/bjmorgan/python_in_chemistry/master?filepath=General%2FFunctions.ipynb">Run the notebook</a></p>
+<p><a href="https://mybinder.org/v2/gh/bjmorgan/python_in_chemistry/master?filepath=General%2FFunctions.ipynb"><img src="https://mybinder.org/badge.svg" alt="Binder" /></a></p>
 
 	  ]]></description>
 	</item>
@@ -131,7 +549,7 @@
 
 <p>A loop really is just that, a way to tell the computer to perform the same task multiple times.</p>
 
-<p><a href="https://mybinder.org/v2/gh/bjmorgan/python_in_chemistry/master?filepath=General%2FLoops.ipynb">Run the notebook</a></p>
+<p><a href="https://mybinder.org/v2/gh/bjmorgan/python_in_chemistry/master?filepath=General%2FLoops.ipynb"><img src="https://mybinder.org/badge.svg" alt="Binder" /></a></p>
 
 	  ]]></description>
 	</item>

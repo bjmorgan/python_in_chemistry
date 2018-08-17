@@ -111,8 +111,10 @@ into the {body} of the default.hbs template -->
         
             <ul class="nav" role="menu">
     <li class="nav-about" role="menuitem"><a href="/about/">About</a></li>
+    <li class="nav-getting-started" role="menuitem"><a href="/getting-started">getting started</a></li>
     <li class="nav-basics" role="menuitem"><a href="/tag/basics/">Basics</a></li>
     <li class="nav-applications" role="menuitem"><a href="/tag/applications/">Applications</a></li>
+    <li class="nav-pylj" role="menuitem"><a href="/pylj">pylj</a></li>
 </ul>
 
         
@@ -161,11 +163,22 @@ into the {body} of the default.hbs template -->
                 <div class="kg-card-markdown">
                     <p>This year I was invited to take part in the ISIS Neutron Training Course, a introductory course for neutron scattering scientists. The aim of our session was to introduce molecular dynamics and show how this could be applied to neutron scattering experiments. This involved a workshop showing how <a href="http://people.bath.ac.uk/arm61/falass/">falass</a> could be used to analyse neutron reflectometry and an introdcutory lecture outlining molecular dynamics.</p>
 
-<p>To deliver this lecture, I decided to develop a small python utility (still very alpha in development) that performs simple 2D argon simulations and provides visualisation that is both supported by Jupyter and easily extensible. The attached notebook is the result of this course.</p>
+<p>To deliver this lecture, I decided to develop a small python utility that performs simple 2D argon simulations and provides visualisation that is both supported by Jupyter and easily extensible. The attached notebook is the result of this course.</p>
 
-<p>It should be noted that the pylj (the MD package) is not perfect and possibly will cause the notebook to crash occasionally. Further due to the computationally intensive nature of MD, I recommend downloading the notebook, installing pylj via pip and running the notebook on your machine. Finally, make sure to also download the additional_code.py file as this makes the plotting easier.</p>
+<p>It should be noted that due to the computationally intensive nature of MD, I recommend downloading the notebook, installing pylj via pip and running the notebook on your machine. On Window type the following into the Anaconda Prompt, on macOS or Linux type it into the terminal.</p>
 
-<p><a href="https://github.com/bjmorgan/python_in_chemistry/tree/master/Neutron_training_Course">Download</a></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install pylj
+</code></pre></div></div>
+
+<p>Finally, make sure to also download the additional_code.py file as this makes the plotting easier (make sure that the additional_code.py file is in the same folder as the lecture when you launch the Jupyter notebook).</p>
+
+<p><a href="https://raw.githubusercontent.com/bjmorgan/python_in_chemistry/master/Neutron_Training_Course/lecture.ipynb">Download Lecture</a></p>
+
+<p><a href="https://raw.githubusercontent.com/bjmorgan/python_in_chemistry/master/Neutron_Training_Course/additional_code.py">Download additional_code</a></p>
+
+<p>(Right click and download the files)</p>
+
+<p>There is currently a server running on which the lecture can be worked through. However, a password is needed, please email Andrew to gain access (arm61 ‘at’ bath.ac.uk). Check that out <a href="http://35.230.133.1/notebook/notebooks/NTC/lecture.ipynb">here</a>.</p>
 
                 </div>
             </section>
@@ -237,8 +250,30 @@ into the {body} of the default.hbs template -->
                                 
                                   
                                     
+                                        
+                                        
+                                            <li><a href="/saxs-detection-limits">Python > Excel</a></li>
+                                        
+                                    
                                   
                                 
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/pylj-launch">pylj Launch</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
                                   
                                 
                                   
@@ -263,7 +298,7 @@ into the {body} of the default.hbs template -->
                         <footer class="read-next-card-footer">
                             <a href="/tag/applications/">
                                 
-                                    See all 1 posts  →
+                                    See all 3 posts  →
                                 
                             </a>
                         </footer>
@@ -272,6 +307,44 @@ into the {body} of the default.hbs template -->
             
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+    <article class="post-card post-template no-image">
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/pylj-launch">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Applications</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">pylj Launch</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    <p>[Andrew](http://pythoninchemistry.org/author/andrew/) has developed a small teaching utility designed to introduce students to molecular dynamics. He is currently in the process of trying to develop some example applications in the form of laboratory exercises.</p>
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <span class="post-card-author">
+                            <a href="/author/andrew/">Andrew McCluskey</a>
+                        </span>
+                    
+                
+                    
+                
+                    
+                
+            </footer>
+        </div>
+    </article>
+
             
 
             <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->

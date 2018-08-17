@@ -40,45 +40,6 @@
    <atom:link href="rss" rel="self" type="application/rss+xml" />
    
 	<item>
-	  <title>Getting Started</title>
-	  <link>http://localhost:4000/getting-started</link>
-		
-				
-		
-				
-						<author>Benjamin Morgan</author>
-				
-		
-				
-		
-	  <pubDate>2017-12-16T00:00:00+00:00</pubDate>
-	  <guid>http://localhost:4000/getting-started</guid>
-	  <description><![CDATA[
-	     <p>The best way to get started with python_in_chemistry is by working through the Data Analysis with Jupyter Notebooks series of notebooks. These will work through:</p>
-
-<ul>
-  <li>an introduction to Jupyter notebooks and allow you to run them online through Binder;</li>
-  <li>performing simple calculations, and using the <code>math</code> module;</li>
-  <li>working with variables;</li>
-  <li>different data types: integers and floats, strings, lists, and numpy arrays;</li>
-  <li>plotting data with <code>matplotlib</code>;</li>
-  <li>basic data analysis and statistics with numpy.</li>
-</ul>
-
-<p>These can be worked through from the links below:</p>
-
-<ol>
-  <li><a href="https://mybinder.org/v2/gh/bjmorgan/python_in_chemistry/master?filepath=Y1S1%20Practical%2FTutorial%201.ipynb">Tutorial 1</a></li>
-  <li><a href="https://mybinder.org/v2/gh/bjmorgan/python_in_chemistry/master?filepath=Y1S1%20Practical%2FTutorial%202.ipynb">Tutorial 2</a></li>
-  <li><a href="https://mybinder.org/v2/gh/bjmorgan/python_in_chemistry/master?filepath=Y1S1%20Practical%2FTutorial%203.ipynb">Tutorial 3</a></li>
-  <li><a href="https://mybinder.org/v2/gh/bjmorgan/python_in_chemistry/master?filepath=Y1S1%20Practical%2FTutorial%204.ipynb">Tutorial 4</a></li>
-  <li><a href="https://mybinder.org/v2/gh/bjmorgan/python_in_chemistry/master?filepath=Y1S1%20Practical%2FTutorial%205.ipynb">Tutorial 5</a></li>
-</ol>
-
-	  ]]></description>
-	</item>
-
-	<item>
 	  <title>Working with Physical Constants and Units</title>
 	  <link>http://localhost:4000/working-with-physical-constants</link>
 		
@@ -106,7 +67,7 @@
 
 <p>These techniques are illustrated in the notebook below, which shows how to use the <code>scipy.constants</code> database to work more conveniently with physical constants and unit conversions.</p>
 
-<p><a href="https://mybinder.org/v2/gh/bjmorgan/python_in_chemistry/master?filepath=General/Working%20with%20units%20and%20physical%20constants.ipynb">Run the notebook</a></p>
+<p><a href="https://mybinder.org/v2/gh/bjmorgan/python_in_chemistry/master?filepath=General/Working%20with%20units%20and%20physical%20constants.ipynb"><img src="https://mybinder.org/badge.svg" alt="Binder" /></a></p>
 
 	  ]]></description>
 	</item>

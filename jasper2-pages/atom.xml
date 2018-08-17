@@ -8,6 +8,81 @@
     
       
       <item>
+        <title>Python &gt; Excel</title>
+        
+          <description>&lt;p&gt;A friend runs a blog which discusses the use of small-angle scattering (which is also a major area of work for myself. However, today he posted a blog discussing the &lt;a href=&quot;http://www.lookingatnothing.com/index.php/archives/2645&quot;&gt;minimum concentration of an analyte required to get a good small angle scattering profile&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 05 Jun 2018 00:00:00 +0100</pubDate>
+        <link>
+        http://localhost:4000/saxs-detection-limits</link>
+        <guid isPermaLink="true">http://localhost:4000/saxs-detection-limits</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Import Anything</title>
+        
+          <description>&lt;p&gt;One of the most common reasons for using Python over other languages, like &lt;a href=&quot;https://en.wikipedia.org/wiki/C_(programming_language)&quot;&gt;C&lt;/a&gt; or &lt;a href=&quot;https://en.wikipedia.org/wiki/Fortran&quot;&gt;Fortran&lt;/a&gt; is the &lt;strong&gt;huge&lt;/strong&gt; number of packages (or libraries or modules) that are available (see my favourite &lt;a href=&quot;https://xkcd.com&quot;&gt;xkcd&lt;/a&gt; comic to send people as the start to use Python below). It is quite likely that you have made use of Python packages before and perhaps not even realised. This post will show how to install a package, and the different ways to make use of them.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 04 Jun 2018 00:00:00 +0100</pubDate>
+        <link>
+        http://localhost:4000/import-anything</link>
+        <guid isPermaLink="true">http://localhost:4000/import-anything</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Making Pretty Plots</title>
+        
+          <description>&lt;p&gt;One of the most common reasons for using Python for data analysis is the easy access to good-looking plots, via &lt;code class=&quot;highlighter-rouge&quot;&gt;matplotlib&lt;/code&gt;. I have used Python for plotting data for many years now, reaching the point that I now &lt;strong&gt;hate&lt;/strong&gt; to see bad-looing plots produced by &lt;a href=&quot;https://datanitro.com/blog/better_excel_charts&quot;&gt;Microsoft Excel&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sat, 26 May 2018 00:00:00 +0100</pubDate>
+        <link>
+        http://localhost:4000/making-pretty-graphs</link>
+        <guid isPermaLink="true">http://localhost:4000/making-pretty-graphs</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Errors and Debugging</title>
+        
+          <description>&lt;p&gt;While teaching Python for data analysis in the first- and second-year computational labs in Bath, one of the most common questions I receive from students can be answered with this simple response:&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Thu, 24 May 2018 00:00:00 +0100</pubDate>
+        <link>
+        http://localhost:4000/errors-and-debugging</link>
+        <guid isPermaLink="true">http://localhost:4000/errors-and-debugging</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>pylj Launch</title>
+        
+          <description>&lt;p&gt;&lt;a href=&quot;http://pythoninchemistry.org/author/andrew/&quot;&gt;Andrew&lt;/a&gt; has developed a small teaching utility designed to introduce students to molecular dynamics. He is currently in the process of trying to develop some example applications in the form of laboratory exercises. In the meantime, more information can be found &lt;a href=&quot;http://pythoninchemistry.org/pylj&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Fri, 18 May 2018 00:00:00 +0100</pubDate>
+        <link>
+        http://localhost:4000/pylj-launch</link>
+        <guid isPermaLink="true">http://localhost:4000/pylj-launch</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Introduction to Molecular Dynamics for Neutron Scatters</title>
         
           <description>&lt;p&gt;This year I was invited to take part in the ISIS Neutron Training Course, a introductory course for neutron scattering scientists. The aim of our session was to introduce molecular dynamics and show how this could be applied to neutron scattering experiments. This involved a workshop showing how &lt;a href=&quot;http://people.bath.ac.uk/arm61/falass/&quot;&gt;falass&lt;/a&gt; could be used to analyse neutron reflectometry and an introdcutory lecture outlining molecular dynamics.&lt;/p&gt;
@@ -63,21 +138,6 @@
         <link>
         http://localhost:4000/loops</link>
         <guid isPermaLink="true">http://localhost:4000/loops</guid>
-      </item>
-      
-    
-      
-      <item>
-        <title>Getting Started</title>
-        
-          <description>&lt;p&gt;The best way to get started with python_in_chemistry is by working through the Data Analysis with Jupyter Notebooks series of notebooks. These will work through:&lt;/p&gt;
-
-</description>
-        
-        <pubDate>Sat, 16 Dec 2017 00:00:00 +0000</pubDate>
-        <link>
-        http://localhost:4000/getting-started</link>
-        <guid isPermaLink="true">http://localhost:4000/getting-started</guid>
       </item>
       
     
