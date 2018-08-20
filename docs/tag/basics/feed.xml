@@ -10,7 +10,7 @@
    <language>en-uk</language>
    
    <title>
-   <![CDATA[ python_in_chemistry ]]>
+   <![CDATA[ pythoninchemistry ]]>
    </title>
    <description>
    <![CDATA[ introducing Python to chemistry students ]]>
@@ -18,7 +18,7 @@
    <link>/</link>
    <image>
    <url>/assets/images/pic.png</url>
-   <title>python_in_chemistry</title>
+   <title>pythoninchemistry</title>
    <link>/</link>
    </image>
    <generator>Jekyll 3.6.2</generator>

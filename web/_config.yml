@@ -10,7 +10,7 @@ baseurl: /
 #baseurl: Users/bjm42/Documents/Work/Teaching/python_in_chemistry/docs/
 
 # Website info
-title: python_in_chemistry 
+title: pythoninchemistry 
 description: introducing Python to chemistry students
 #cover: green#assets/images/pychem.jpeg
 logo: assets/images/pic.png

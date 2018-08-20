@@ -8,7 +8,7 @@ class: page-template
 subclass: 'post page'
 ---
 
-The best way to get started with python_in_chemistry is by working through the Data Analysis with Jupyter Notebooks series. These will cover:
+The best way to get started with pythoninchemistry is by working through the Data Analysis with Jupyter Notebooks series. These will cover:
 
 - an introduction to Jupyter notebooks and allow you to run them online through Binder;
 - performing simple calculations, and using the `math` module;

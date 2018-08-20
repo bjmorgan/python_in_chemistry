@@ -8,7 +8,7 @@ class: page-template
 subclass: 'post page'
 ---
 
-The python_in_chemistry pages are a series of resources for students and educators alike. They aim to combine an introduction to the Python programming language with an understanding of chemistry. 
+The pythoninchemistry pages are a series of resources for students and educators alike. They aim to combine an introduction to the Python programming language with an understanding of chemistry. 
 
 This site will introduce a range of resources, covering how to get started with Python and how to make use of Jupyter notebooks. While allowing students to consolidate chemistry knowledge learnt in lectures and tutorials. 
 
@@ -20,4 +20,4 @@ This open-source project is run from the University of Bath by:
 - [Dr. Ben Morgan](http://www.analysisandsynthesis.com/)
 - [Mr. Andrew McCluskey](http://people.bath.ac.uk/arm61)
 
-If you want to get involved and help to write for python_in_chemistry please get in touch with any of the people above. 
+If you want to get involved and help to write for pythoninchemistry please get in touch with any of the people above. 
