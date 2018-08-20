@@ -1,7 +1,7 @@
 ---
 layout: page
-current: pylj 
-title: 
+current: pylj
+title:
 navigation: true
 logo: 'assets/images/python_in_chemistry.png'
 class: page-template
@@ -20,26 +20,26 @@ Currently pylj can perform the simulation of a 2D argon system by molecular dyna
 
 ### examples
 
-Examples of the [Monte-Carlo](http://35.230.133.1/notebook/notebooks/examples/monte_carlo.ipynb) and [molecular dynamics](http://35.230.133.1/notebook/notebooks/examples/molecular_dynamics.ipynb) interfaces can be found at the following links (the password is the name of the software). *Currently the cloud resource being accessed for this is small so wait times my be long*.  
+Examples of the [Monte-Carlo](https://mybinder.org/v2/gh/arm61/pylj/master?filepath=examples/simple_examples/monte_carlo.ipynb) and [molecular dynamics](https://mybinder.org/v2/gh/arm61/pylj/master?filepath=examples/simple_examples/molecular_dynamics.ipynb) interfaces can be found at the following links. *This is running on mybinder, which is not a resource that we control. As a result it may take a few attempts to build the resource*.  
 
 Some examples of possible teaching laboratory exercises making use of pylj are discussed in the **Usage** section of the [paper](http://jose.theoj.org/papers/58daa1a1a564dc8e0f99ffcdae20eb1d)
 
 ### how to get pylj?
 
-If you are interested in using pylj, in any sense, fork the code at [github.com/arm61/pylj](http://www.github.com/arm61/pylj) or install via `pip`. If you have any trouble email Andrew (arm61 ‘at’ bath.ac.uk). 
+If you are interested in using pylj, in any sense, fork the code at [github.com/arm61/pylj](http://www.github.com/arm61/pylj) or install via `pip`. If you have any trouble email Andrew (arm61 ‘at’ bath.ac.uk).
 
 ### is there documentation?
 
-Full API level documentation is available at [pylj.rtfd.io](http://pylj.rtfd.io). For something more high-level, the [paper](http://jose.theoj.org/papers/58daa1a1a564dc8e0f99ffcdae20eb1d) is a great place to start. 
+Full API level documentation is available at [pylj.rtfd.io](http://pylj.rtfd.io). For something more high-level, the [paper](http://jose.theoj.org/papers/58daa1a1a564dc8e0f99ffcdae20eb1d) is a great place to start.
 
 ### requirements
 
-To run pylj locally we recommend installing the [Anaconda](http://pythoninchemistry.org/running-jupyter-locally), which gives access to Jupyter notebook framework and the necessary packages. It is also it is desirable to have a C++ compiler, most macOS or Linux machines should already have this, on Windows it is best to install the [Visual C++ package](https://www.microsoft.com/en-gb/download/details.aspx?id=48145). 
+To run pylj locally we recommend installing the [Anaconda](http://pythoninchemistry.org/running-jupyter-locally), which gives access to Jupyter notebook framework and the necessary packages. It is also it is desirable to have a C++ compiler, most macOS or Linux machines should already have this, on Windows it is best to install the [Visual C++ package](https://www.microsoft.com/en-gb/download/details.aspx?id=48145).
 
 ### contributing and feature requests
 
-Information about contributing can be found [here](https://github.com/arm61/pylj/blob/master/CONTRIBUTING.md). 
+Information about contributing can be found [here](https://github.com/arm61/pylj/blob/master/CONTRIBUTING.md).
 
-### how to cite pylj 
+### how to cite pylj
 
 Thank you for using pylj. If you use this code in a teaching laboratory or a publication we would greatly appreciate if you would cite both the [JOSE paper](http://jose.theoj.org/papers/58daa1a1a564dc8e0f99ffcdae20eb1d) and the Zenodo DOI appropriate to your particular version of pylj (use the function `pylj.util.__cite__()` to get the appropriate DOI).
