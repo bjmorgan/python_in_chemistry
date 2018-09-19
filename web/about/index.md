@@ -24,4 +24,4 @@ If you want to get involved and help to write for pythoninchemistry please get i
 
 For a *very* general overview of the project, check out Andrew's [PYCON UK 2018](https://2018.pyconuk.org/) Education summit talk on YouTube.
 
-<iframe width="512" height="288" src="https://www.youtube.com/embed/DcLzpfCJkBA?list=PLrkpavSsBQZ5m7vf3v-3jZRyZeM1CZF5F" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+<iframe width="512" height="288" src="https://www.youtube.com/embed/DcLzpfCJkBA?" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
