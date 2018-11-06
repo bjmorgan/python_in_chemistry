@@ -15,7 +15,13 @@ ben:
 fiona:
   username: fiona
   name: Fiona Dickinson
-  url_full: http://www.bath.ac.uk/chemistry/contacts/academics/fiona-dickinson/ 
+  url_full: http://www.bath.ac.uk/chemistry/contacts/academics/fiona-dickinson/
   url: bath.ac.uk/chemistry/contacts/academics/fiona-dickinson/
-  bio: teaching fellow 
+  bio: teaching fellow
   twitter: chemfd
+adam:
+  username: adam
+  name: Adam Symington
+  url_full: https://symmy596.github.io
+  url: symmy596.github.io
+  bio: computational chemistry phd student

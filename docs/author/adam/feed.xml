@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+      <title>/</title>
+   
+   <link>/</link>
+   <description>introducing Python to chemistry students</description>
+   <language>en-uk</language>
+   
+      
+            
+      
+            
+      
+            
+      
+            
+               
+               
+                  <managingEditor>Adam Symington</managingEditor>
+            
+      
+   
+   <title>
+   <![CDATA[ Adam Symington - pythoninchemistry ]]>
+   </title>
+   <description>
+   <![CDATA[ introducing Python to chemistry students ]]>
+   </description>
+   <link>/</link>
+   <image>
+   <url>/assets/images/pic.png</url>
+   <title>Adam Symington - pythoninchemistry</title>
+   <link>/</link>
+   </image>
+   <generator>Jekyll 3.6.2</generator>
+   <lastBuildDate></lastBuildDate>
+   <atom:link href="/author/adam/rss.xml" rel="self" type="application/rss+xml"/>
+   <ttl>60</ttl>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+
+</channel>
+</rss>
