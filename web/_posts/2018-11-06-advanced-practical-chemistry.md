@@ -35,7 +35,7 @@ $$ E_{\text{repulsive}}(r_{ij}) = \frac{A}{r_{ij}^{12}}, $$
 again $A$ is some interaction specific constant.
 The total Lennard-Jones interaction is then the linear combination of these two terms,
 
-$$ E\text{LJ}(r_{ij}) = E_{\text{repulsive}}(r_{ij}) + E_{\text{attractive}}(r_{ij}) = \frac{A}{r_{ij}^{12}} - \frac{B}{r_{ij}^6}. $$
+$$ E_{\text{LJ}}(r_{ij}) = E_{\text{repulsive}}(r_{ij}) + E_{\text{attractive}}(r_{ij}) = \frac{A}{r_{ij}^{12}} - \frac{B}{r_{ij}^6}. $$
 
 It is easy to present these equations and graphical representation in a lab manual, but the effectiveness of this is debatable.
 In our course, students were given the equation and then asked to define a function and then plot the attractive, repulsive and total energy of the Lennard-Jones interaction, as shown below.
