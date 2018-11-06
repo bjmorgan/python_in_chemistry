@@ -14,6 +14,7 @@ published: true
 
 A few months ago, I volunteered, along with [Andrew McCluskey](https://arm61.github.io) to rewrite the third-year computational chemistry lab module at the University of Bath.
 At the time, Andrew had just published his *summer procrastination* - [pylj](https://doi.org/10.21105/jose.00019), which is an educational software that introduces students to classical atomistic simulations, and this lab seemed like the perfect opportunity to depoly it in a teaching environment.
+
 Our course is based entirely in [Jupyter Notebooks](https://jupyter.org) and introduces students to classical molecular dynamics using pylj, and solid state chemistry using DL_POLY and METADISE.
 Students will learn the theory of MD, ionic transport, defect chemsitry, and they will have the freedom to answer theiry own research questions.
 Over the next four weeks the students will be working through our lab course and I will write a weekly blog post, hopefully highlighting how Python is being used to enhance the learning experience of chemistry undergraduate students.
