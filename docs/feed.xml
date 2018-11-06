@@ -1,4 +1,78 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2018-11-06T12:23:14+00:00</updated><id>/</id><title type="html">pythoninchemistry</title><subtitle>introducing Python to chemistry students</subtitle><entry><title type="html">Python &amp;gt; Excel</title><link href="/saxs-detection-limits" rel="alternate" type="text/html" title="Python &gt; Excel" /><published>2018-06-05T00:00:00+01:00</published><updated>2018-06-05T00:00:00+01:00</updated><id>/saxs-detection-limits</id><content type="html" xml:base="/saxs-detection-limits">&lt;p&gt;A friend runs a blog which discusses the use of small-angle scattering (which is also a major area of work for myself). However, today he posted a blog discussing the &lt;a href=&quot;http://www.lookingatnothing.com/index.php/archives/2645&quot;&gt;minimum concentration of an analyte required to get a good small angle scattering profile&lt;/a&gt;.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2018-11-06T12:36:00+00:00</updated><id>/</id><title type="html">pythoninchemistry</title><subtitle>introducing Python to chemistry students</subtitle><entry><title type="html">Advanced Practical Chemistry - Part I</title><link href="/advanced-practical-chemistry" rel="alternate" type="text/html" title="Advanced Practical Chemistry - Part I" /><published>2018-11-06T00:00:00+00:00</published><updated>2018-11-06T00:00:00+00:00</updated><id>/advanced-practical-chemistry</id><content type="html" xml:base="/advanced-practical-chemistry">&lt;p&gt;A few months ago, I volunteered, along with &lt;a href=&quot;https://arm61.github.io&quot;&gt;Andrew McCluskey&lt;/a&gt; to rewrite the third-year computational chemistry lab module at the University of Bath.
+At the time, Andrew had just published his &lt;em&gt;summer procrastination&lt;/em&gt; - &lt;a href=&quot;https://doi.org/10.21105/jose.00019&quot;&gt;pylj&lt;/a&gt;, which is an educational software that introduces students to classical atomistic simulations, and this lab seemed like the perfect opportunity to depoly it in a teaching environment.
+Our course is based entirely in &lt;a href=&quot;https://jupyter.org&quot;&gt;Jupyter Notebooks&lt;/a&gt; and introduces students to classical molecular dynamics using pylj, and solid state chemistry using DL_POLY and METADISE.
+Students will learn the theory of MD, ionic transport, defect chemsitry, and they will have the freedom to answer theiry own research questions.
+Over the next four weeks the students will be working through our lab course and I will write a weekly blog post, hopefully highlighting how Python is being used to enhance the learning experience of chemistry undergraduate students.&lt;/p&gt;
+
+&lt;h3 id=&quot;week-one&quot;&gt;Week One&lt;/h3&gt;
+
+&lt;p&gt;This week exclusively used pylj and involved students building, step by step their own MD code, which they then used to construct a 2D phase diagram of argon gas.
+Jupyter Notebooks allow us to teach in a much more interactive way.
+Take the Lennard-Jones model for example.&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;E\text{attractive}(r_{ij}) = \frac{-B}{r_{ij}^6},&lt;/script&gt;
+
+&lt;p&gt;where $B$ is some constant for the interaction, and $r_{ij}$ is the distance between the two atoms.
+The Pauli exclusion principle is repulsive and only present over very short distances, and therefore is modelled with the relation,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;E\text{repulsive}(r_{ij}) = \frac{A}{r_{ij}^{12}},&lt;/script&gt;
+
+&lt;p&gt;again $A$ is some interaction specific constant.
+The total Lennard-Jones interaction is then the linear combination of these two terms,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;E\text{LJ}(r_{ij}) = E\text{repulsive}(r_{ij}) + E\text{attractive}(r_{ij}) = \frac{A}{r_{ij}^{12}} - \frac{B}{r_{ij}^6}.&lt;/script&gt;
+
+&lt;p&gt;It is easy to present these equations and graphical representation in a lab manual, but the effectiveness of this is debatable.
+In our course, students were given the equation and then asked to define a function and then plot the attractive, repulsive and total energy of the Lennard-Jones interaction, as shown below.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;matplotlib&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;inline&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;attractive&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;power&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;repulsive&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;power&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;lj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;constants&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;repulsive&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;constants&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;attractive&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;constants&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;linspace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;3e-10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;8e-10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;attractive&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;9.273e-78&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Attractive'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;repulsive&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.363e-134&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Repulsive'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;1.363e-134&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;9.273e-78&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Lennard-Jones'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;xlabel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;r'$r_{ij}$/m'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ylabel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;r'$E$/J'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;legend&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p align=&quot;center&quot;&gt;
+&lt;img src=&quot;/assets/images/apc001.png&quot; style=&quot;width: 80%&quot; /&gt;​
+&lt;/p&gt;
+
+&lt;p&gt;In this way, we ensured that students not only understood the Lennard-Jones potential, but also developed their programming knowledge, which at the very least is a useful transferable skill.&lt;/p&gt;
+
+&lt;p&gt;The first half of the course follows these lines and involves the theory of molecular dynamics written in Markdown cells within the notebook.
+Mixed with code cells, where students would build functions to do each part of the eventual simulation, e.g. update particle positions.&lt;/p&gt;
+
+&lt;p&gt;Following the introduction of MD, students had to use pylj to generate the 2D phase diagram of argon gas, by varying the temperature of the simulation and the number of particles.
+Below is an example of such a phase diagram.&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+&lt;img src=&quot;/assets/images/apc002.png&quot; style=&quot;width: 80%&quot; /&gt;​
+&lt;/p&gt;
+
+&lt;h4 id=&quot;feedback&quot;&gt;Feedback&lt;/h4&gt;
+
+&lt;p&gt;This class contained a mix of students who had encountered Python and students who had not.
+There was certainly a barrier that needed to be hurdled for the non-programming students, but the lab was definitely accesible to them and they were able to achieve the learning outcomes.
+The non-programmers saw the trasferable skills argument and were actually very happy to try theiry hand at some light programming.
+There were issues with setting up the notebook before peopl ecould embark on the exercise.
+However, this is more down to the implementation of the Jupyter Notebooks on the University computers, than the exercise itself.
+In future years, more effort does need to be take to make the setup as painless as possible because it is better that students dont’ get ticked off when trying to build conda environments.&lt;/p&gt;</content><author><name>Adam Symington</name></author><category term="Teaching" /><summary type="html">A few months ago, I volunteered, along with Andrew McCluskey to rewrite the third-year computational chemistry lab module at the University of Bath. At the time, Andrew had just published his summer procrastination - pylj, which is an educational software that introduces students to classical atomistic simulations, and this lab seemed like the perfect opportunity to depoly it in a teaching environment. Our course is based entirely in Jupyter Notebooks and introduces students to classical molecular dynamics using pylj, and solid state chemistry using DL_POLY and METADISE. Students will learn the theory of MD, ionic transport, defect chemsitry, and they will have the freedom to answer theiry own research questions. Over the next four weeks the students will be working through our lab course and I will write a weekly blog post, hopefully highlighting how Python is being used to enhance the learning experience of chemistry undergraduate students.</summary></entry><entry><title type="html">Python &amp;gt; Excel</title><link href="/saxs-detection-limits" rel="alternate" type="text/html" title="Python &gt; Excel" /><published>2018-06-05T00:00:00+01:00</published><updated>2018-06-05T00:00:00+01:00</updated><id>/saxs-detection-limits</id><content type="html" xml:base="/saxs-detection-limits">&lt;p&gt;A friend runs a blog which discusses the use of small-angle scattering (which is also a major area of work for myself). However, today he posted a blog discussing the &lt;a href=&quot;http://www.lookingatnothing.com/index.php/archives/2645&quot;&gt;minimum concentration of an analyte required to get a good small angle scattering profile&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;This blog included a Excel spreadsheet detailing how to preform this calculation. And naturally I was immediately keen to show how this could be performed in Python. So linked below is a Jupyter notebook that uses numpy and pandas to reproduce the work of &lt;a href=&quot;http://www.lookingatnothing.com&quot;&gt;Brian&lt;/a&gt;.&lt;/p&gt;
 
@@ -347,29 +421,4 @@ Temperature,k,dk
 
 &lt;p&gt;A loop really is just that, a way to tell the computer to perform the same task multiple times.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://mybinder.org/v2/gh/bjmorgan/python_in_chemistry/master?filepath=General%2FLoops.ipynb&quot;&gt;&lt;img src=&quot;https://mybinder.org/badge.svg&quot; alt=&quot;Binder&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>Andrew McCluskey</name></author><category term="Basics" /><summary type="html">This notebook follows on from the functions notebook. The aim here is to show the utility of loop in Python. Again I am aiming to use examples from chemistry related problems, but occasionally examples from physics and mathematics will come through.</summary></entry><entry><title type="html">Functions</title><link href="/functions" rel="alternate" type="text/html" title="Functions" /><published>2017-12-16T00:00:00+00:00</published><updated>2017-12-16T00:00:00+00:00</updated><id>/functions</id><content type="html" xml:base="/functions">&lt;p&gt;Functions are a fundamental aspect of many programming languages. They allow a programmer to both simplify their code by hiding away many lines of code into a single line, while reducing the amount of work a programmer needs to do, if they need to do the same thing many times.&lt;/p&gt;
-
-&lt;p&gt;The concept of a function will hopefully be familar from mathematics, e.g.&lt;/p&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;f(x)&lt;/script&gt;
-
-&lt;p&gt;where, &lt;script type=&quot;math/tex&quot;&gt;f(x)&lt;/script&gt; is some mathematical operation that acts on the argument &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt;, while the details of the function are abstracted away. An example of a function is,&lt;/p&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;f(x) = x^2&lt;/script&gt;
-
-&lt;p&gt;Using this we can say that &lt;script type=&quot;math/tex&quot;&gt;f(2) = 4&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;f(3)=9&lt;/script&gt;, etc.&lt;/p&gt;
-
-&lt;p&gt;A function in programming is very similar, it consists of arguments and returns a value after some operation has taken place.&lt;/p&gt;
-
-&lt;p&gt;The Pythonic way to &lt;em&gt;define&lt;/em&gt; a function is:&lt;/p&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;name_of_function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;argument&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;operation&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;def&lt;/code&gt; tells the computer that you are wanting to &lt;strong&gt;define&lt;/strong&gt; a function, the &lt;code class=&quot;highlighter-rouge&quot;&gt;return&lt;/code&gt; tells the computer that this is the thing that should be sent back to the where the function is called.&lt;/p&gt;
-
-&lt;p&gt;The use of &lt;strong&gt;functions&lt;/strong&gt; is an important paradigm in programming – the following Jupyter notebook gives some examples of functions and how they can be used.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://mybinder.org/v2/gh/bjmorgan/python_in_chemistry/master?filepath=General%2FFunctions.ipynb&quot;&gt;&lt;img src=&quot;https://mybinder.org/badge.svg&quot; alt=&quot;Binder&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>Andrew McCluskey</name></author><category term="Basics" /><summary type="html">Functions are a fundamental aspect of many programming languages. They allow a programmer to both simplify their code by hiding away many lines of code into a single line, while reducing the amount of work a programmer needs to do, if they need to do the same thing many times.</summary></entry></feed>
+&lt;p&gt;&lt;a href=&quot;https://mybinder.org/v2/gh/bjmorgan/python_in_chemistry/master?filepath=General%2FLoops.ipynb&quot;&gt;&lt;img src=&quot;https://mybinder.org/badge.svg&quot; alt=&quot;Binder&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>Andrew McCluskey</name></author><category term="Basics" /><summary type="html">This notebook follows on from the functions notebook. The aim here is to show the utility of loop in Python. Again I am aiming to use examples from chemistry related problems, but occasionally examples from physics and mathematics will come through.</summary></entry></feed>

@@ -9,7 +9,7 @@ tags: [Teaching]
 class: post-template
 subclass: 'post tag-teaching'
 author: adam
-published: false
+published: true
 ---
 
 A few months ago, I volunteered, along with [Andrew McCluskey](https://arm61.github.io) to rewrite the third-year computational chemistry lab module at the University of Bath.
@@ -87,4 +87,4 @@ There was certainly a barrier that needed to be hurdled for the non-programming 
 The non-programmers saw the trasferable skills argument and were actually very happy to try theiry hand at some light programming.
 There were issues with setting up the notebook before peopl ecould embark on the exercise.
 However, this is more down to the implementation of the Jupyter Notebooks on the University computers, than the exercise itself.
-In future years, more effort does need to be take to make the setup as painless as possible because it is better that students dont' get ticked off when trying to build conda environments. 
+In future years, more effort does need to be take to make the setup as painless as possible because it is better that students dont' get ticked off when trying to build conda environments.
