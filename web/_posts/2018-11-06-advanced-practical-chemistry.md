@@ -24,17 +24,17 @@ This week exclusively used pylj and involved students building, step by step the
 Jupyter Notebooks allow us to teach in a much more interactive way.
 Take the Lennard-Jones model for example.
 
-$$ E\text{attractive}(r_{ij}) = \frac{-B}{r_{ij}^6}, $$
+$$ E_{\text{attractive}}(r_{ij}) = \frac{-B}{r_{ij}^6}, $$
 
 where $B$ is some constant for the interaction, and $r_{ij}$ is the distance between the two atoms.
 The Pauli exclusion principle is repulsive and only present over very short distances, and therefore is modelled with the relation,
 
-$$ E\text{repulsive}(r_{ij}) = \frac{A}{r_{ij}^{12}}, $$
+$$ E_{\text{repulsive}}(r_{ij}) = \frac{A}{r_{ij}^{12}}, $$
 
 again $A$ is some interaction specific constant.
 The total Lennard-Jones interaction is then the linear combination of these two terms,
 
-$$ E\text{LJ}(r_{ij}) = E\text{repulsive}(r_{ij}) + E\text{attractive}(r_{ij}) = \frac{A}{r_{ij}^{12}} - \frac{B}{r_{ij}^6}. $$
+$$ E\text{LJ}(r_{ij}) = E_{\text{repulsive}}(r_{ij}) + E_{\text{attractive}}(r_{ij}) = \frac{A}{r_{ij}^{12}} - \frac{B}{r_{ij}^6}. $$
 
 It is easy to present these equations and graphical representation in a lab manual, but the effectiveness of this is debatable.
 In our course, students were given the equation and then asked to define a function and then plot the attractive, repulsive and total energy of the Lennard-Jones interaction, as shown below.

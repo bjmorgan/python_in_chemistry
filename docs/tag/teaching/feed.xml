@@ -56,17 +56,17 @@ Over the next four weeks the students will be working through our lab course and
 Jupyter Notebooks allow us to teach in a much more interactive way.
 Take the Lennard-Jones model for example.</p>
 
-<script type="math/tex; mode=display">E\text{attractive}(r_{ij}) = \frac{-B}{r_{ij}^6},</script>
+<script type="math/tex; mode=display">E_{\text{attractive}}(r_{ij}) = \frac{-B}{r_{ij}^6},</script>
 
 <p>where $B$ is some constant for the interaction, and $r_{ij}$ is the distance between the two atoms.
 The Pauli exclusion principle is repulsive and only present over very short distances, and therefore is modelled with the relation,</p>
 
-<script type="math/tex; mode=display">E\text{repulsive}(r_{ij}) = \frac{A}{r_{ij}^{12}},</script>
+<script type="math/tex; mode=display">E_{\text{repulsive}}(r_{ij}) = \frac{A}{r_{ij}^{12}},</script>
 
 <p>again $A$ is some interaction specific constant.
 The total Lennard-Jones interaction is then the linear combination of these two terms,</p>
 
-<script type="math/tex; mode=display">E\text{LJ}(r_{ij}) = E\text{repulsive}(r_{ij}) + E\text{attractive}(r_{ij}) = \frac{A}{r_{ij}^{12}} - \frac{B}{r_{ij}^6}.</script>
+<script type="math/tex; mode=display">E\text{LJ}(r_{ij}) = E_{\text{repulsive}}(r_{ij}) + E_{\text{attractive}}(r_{ij}) = \frac{A}{r_{ij}^{12}} - \frac{B}{r_{ij}^6}.</script>
 
 <p>It is easy to present these equations and graphical representation in a lab manual, but the effectiveness of this is debatable.
 In our course, students were given the equation and then asked to define a function and then plot the attractive, repulsive and total energy of the Lennard-Jones interaction, as shown below.</p>
