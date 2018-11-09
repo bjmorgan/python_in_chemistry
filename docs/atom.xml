@@ -8,6 +8,23 @@
     
       
       <item>
+        <title>Advanced Practical Chemistry - Part II</title>
+        
+          <description>&lt;p&gt;After the introduction to molecular dynamics in &lt;a href=&quot;./advanced-practical-chemistry&quot;&gt;week 1&lt;/a&gt;, the students were unleased on their own mini-research project - investigating the transport properties of CaF&lt;sub&gt;2&lt;/sub&gt;.
+In this exercise, we wanted the students to user DL_POLY to determine the temperature range within which CaF&lt;sub&gt;2&lt;/sub&gt; becomes a &lt;a href=&quot;https://en.wikipedia.org/wiki/Fast_ion_conductor&quot;&gt;fast ion conductor&lt;/a&gt;.
+For context, CaF&lt;sub&gt;2&lt;/sub&gt; is already well studied and was choosen because the literature is full of examples for students to compare their results against.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Fri, 09 Nov 2018 00:00:00 +0000</pubDate>
+        <link>
+        /advanced-practical-chemistry-2</link>
+        <guid isPermaLink="true">/advanced-practical-chemistry-2</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Advanced Practical Chemistry - Part I</title>
         
           <description>&lt;p&gt;A few months ago, I volunteered, along with &lt;a href=&quot;https://arm61.github.io&quot;&gt;Andrew McCluskey&lt;/a&gt; to rewrite the third-year computational chemistry lab module at the University of Bath.
