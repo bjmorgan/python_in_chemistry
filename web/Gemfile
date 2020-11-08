@@ -1,5 +1,8 @@
 source "https://rubygems.org"
 
-gem "jekyll", "~> 3.6.2"
+gem "jekyll", ">= 3.6.3"
 gem "github-pages", "~> 168"
-gem "rake", "~> 12.3.0"
+gem "rake", ">= 12.3.3"
+gem "kramdown", ">= 2.3.0"
+gem "nokogiri", ">= 1.10.8"
+gem "ffi", ">= 1.9.24"
